@@ -125,6 +125,12 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 30px;
   }
+  .section {
+
+  padding: 30px 30;
+
+}
+
 }

@@ -6,16 +6,16 @@ export default function AboutHero() {
   return (
     <section className={styles.hero} aria-label="About Stonefort">
       {/* FULL WIDTH IMAGE pinned to top-right */}
-<div className={styles.heroImage} aria-hidden="true">
-  <Image
-    src="/images/about/aboutherobanner.webp"
-    alt=""
-    width={600}  
-    height={500}  
-    priority
-    className={styles.image}
-  />
-</div>
+      <div className={styles.heroImage} aria-hidden="true">
+        <Image
+          src="/images/about/abouttopbanner.webp"
+          alt=""
+          width={600}  
+          height={500}  
+          priority
+          className={styles.image}
+        />
+      </div>
 
       {/* LEFT CONTENT stays inside max width */}
       <div className={styles.container}>

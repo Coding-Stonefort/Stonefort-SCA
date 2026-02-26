@@ -5,18 +5,6 @@
   overflow: hidden;
 }
 
-/* premium background */
-/* .section::before{
-  content:"";
-  position:absolute;
-  inset:-200px -160px -200px;
-  background:
-    radial-gradient(900px 520px at 20% 20%, rgba(77,110,85,.25), transparent 60%),
-    radial-gradient(900px 520px at 80% 25%, rgba(135,171,147,.18), transparent 60%),
-    radial-gradient(1200px 900px at 50% 75%, rgba(0,0,0,.6), transparent 65%);
-  filter: blur(12px);
-  pointer-events:none;
-} */
 
 .container{
   width: min(1180px, calc(100% - 32px));
@@ -126,5 +114,15 @@
 @media(max-width:900px){
   .grid{
     grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:640px) {
+  .section{
+  padding: 30px 0 30px;
+
+  }
+  .title {
+    font-size: 34px;
   }
 }

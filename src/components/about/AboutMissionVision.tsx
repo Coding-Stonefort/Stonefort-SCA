@@ -1,4 +1,5 @@
 import styles from "./AboutMissionVision.module.css";
+import Image from "next/image";
 
 export default function AboutMissionVision() {
   return (
@@ -9,8 +10,15 @@ export default function AboutMissionVision() {
         <div className={styles.cards}>
           {/* Mission Card */}
           <div className={styles.card}>
-            <div className={styles.icon}>
-              <span>🎯</span>
+            <div className={styles.imageWrapper}>
+              <Image
+              src="/images/about/OurMission.webp"
+              alt="Stonefort Mission"
+              width={120}
+              height={120}
+              priority
+              />
+           
             </div>
             <h3>Our Mission</h3>
             <p>
@@ -23,8 +31,14 @@ export default function AboutMissionVision() {
 
           {/* Vision Card */}
           <div className={styles.card}>
-            <div className={styles.icon}>
-              <span>👁️</span>
+            <div className={styles.imageWrapper}>
+              <Image
+              src="/images/about/OurVision.webp"
+              alt="Stonefort Vission"
+              width={120}
+              height={120}
+              />
+             
             </div>
             <h3>Our Vision</h3>
             <p>

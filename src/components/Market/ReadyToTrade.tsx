@@ -40,7 +40,7 @@ export default function ReadyToTrade() {
             <div className={styles.mediaGlow} aria-hidden="true" />
             <div className={styles.mediaFrame}>
               <Image
-                src="/images/market/registerrightimg.webp"
+                src="/images/market/registerimg.webp"
                 alt="Stonefort account opening"
                 width={980}
                 height={720}

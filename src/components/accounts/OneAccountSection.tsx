@@ -47,7 +47,7 @@ export default function OneAccountSection() {
       {/* OUTSIDE container */}
       <div className={styles.rightImage}>
         <Image
-          src="/images/accounts/handimg.webp"
+          src="/images/accounts/Handholding forex.webp"
           alt="Trading App"
           width={600}
           height={800}

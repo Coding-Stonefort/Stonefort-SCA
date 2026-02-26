@@ -7,13 +7,15 @@ export default function MarketHero() {
     <section className={styles.hero} aria-label="Market hero">
       {/* Background image */}
       <div className={styles.bg} aria-hidden="true">
-        <Image
-          src="/images/market/MarketHerobanner.webp"
-          alt=""
-          fill
-          priority
-          className={styles.bgImg}
-        />
+        <div className={styles.mobileImgWrap}>
+          <Image
+            src="/images/market/MarketHerobanner.webp"
+            alt=""
+            fill
+            priority
+            className={styles.bgImg}
+          />
+        </div>
         <div className={styles.overlay} />
       </div>
 

@@ -24,7 +24,7 @@ export default function PlatformTabs() {
         kicker: "TRADING PLATFORM",
         title: "MetaTrader 5",
         desc: "Access global markets with a professional-grade platform built for advanced analysis and execution.",
-        img: "/images/platform/GetStartedImg.webp",
+        img: "/images/platform/metaTrader5twombl.webp",
       },
       {
         key: "mtweb",
@@ -32,7 +32,7 @@ export default function PlatformTabs() {
         kicker: "TRADING PLATFORM",
         title: "MetaTrader Web",
         desc: "Trade directly from your browser with a clean interface and no installation required.",
-        img: "/images/platform/mt5ChooseMockup.webp",
+        img: "/images/platform/MT5WebTab.webp",
       },
       {
         key: "mobile",
@@ -40,16 +40,9 @@ export default function PlatformTabs() {
         kicker: "TRADING PLATFORM",
         title: "Stonefort Trader Mobile",
         desc: "Trade on the go with a responsive experience designed for speed, clarity, and control.",
-        img: "/images/platform/mt5whysfs.webp",
+        img: "/images/platform/Stonefortrader.webp",
       },
-      {
-        key: "web",
-        label: "Stonefort Trader Web",
-        kicker: "TRADING PLATFORM",
-        title: "Stonefort Trader Web",
-        desc: "A smooth web terminal experience for everyday trading with modern tools and clean UI.",
-        img: "/images/platform/notuse.webp",
-      },
+
     ],
     []
   );
@@ -68,7 +61,7 @@ export default function PlatformTabs() {
         <div className={styles.left}>
           <h2 className={styles.h2}>Your Platform. Your Trading Style.</h2>
           <p className={styles.p}>
-            Trade seamlessly on Stonefort’s advanced trading solutions from web and mobile to the globally trusted MetaTrader suite.
+            Trade with confidence on Stonefort’s advanced platforms, from web and mobile access to the globally trusted MetaTrader suite. Built for speed, flexibility, and control, wherever you trade. 
           </p>
 
           {/* <a className={styles.learnMore} href="/platform">

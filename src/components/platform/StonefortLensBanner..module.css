@@ -138,6 +138,10 @@
 }
 
 @media (max-width: 520px){
+  .section{
+  padding: 30px 0 30px;
+
+}
   .title{
     font-size: 34px;
   }

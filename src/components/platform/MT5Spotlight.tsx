@@ -31,7 +31,7 @@ export default function MT5Spotlight() {
         <div className={styles.visual}>
           <div className={styles.visualFrame}>
             <Image
-              src="/images/platform/Terminalmt5.webp"
+              src="/images/platform/Laptopmockupwithmultipleslayers.webp"
               alt="MetaTrader 5 terminal"
               width={900}
               height={600}

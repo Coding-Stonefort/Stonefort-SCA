@@ -24,7 +24,7 @@ export default function HomePage() {
       <BeginnerTradersSection />
       <FlexibleTradingSolutions />
       <RiskFreeDemoCta />
-      <PaymentGatewaysSlider />
+      {/* <PaymentGatewaysSlider /> */}
       <AccountsPlans />
       <Steps3 />
        <GetStartedCTA />

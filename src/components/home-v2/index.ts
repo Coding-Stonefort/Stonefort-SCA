@@ -1,0 +1,13 @@
+export { default as Hero } from "./HomeHero";
+export { default as MetaBar } from "./MetaBar";
+export { default as TrustedPlatforms } from "./TrustedPlatforms";
+export { default as WhyChoose } from "./WhyChoose";
+export { default as ExperiencedTraders } from "./ExperiencedTraders";
+export { default as CFDMarketsPro } from "./CFDMarketsPro";
+export { default as BeginnerTradersSection } from "./BeginnerTradersSection";
+export { default as FlexibleTradingSolutions } from "./FlexibleTradingSolutions";
+export { default as RiskFreeDemoCta } from "./RiskFreeDemoCta"; 
+export { default as PaymentGatewaysSlider } from "./PaymentGatewaysSlider";
+export { default as AccountsPlans } from "./AccountsPlans"; 
+export { default as Steps3 } from "./Steps3";
+export { default as GetStartedCTA } from "./GetStartedCTA"; 

@@ -127,6 +127,11 @@
 }
 
 @media (max-width: 520px){
+  
+  .hero{
+  padding: 30px 0px ;
+
+}
   .heroImage{
     height: 260px;
   }

@@ -298,3 +298,10 @@
   .right{ grid-template-columns: 1fr; }
   .title{ max-width: none; }
 }
+@media (max-width: 640px){
+  .section 
+  {
+  padding: 30px 10px;
+
+}
+}

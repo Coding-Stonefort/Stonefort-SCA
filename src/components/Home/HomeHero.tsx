@@ -11,12 +11,11 @@ export default function HomeHero() {
 
 
           <h1 className={styles.h1}>
-            Online trading with a <span className={styles.hl}>CMA regulated</span> UAE broker
+            Online trading built on Trust. Backed by <span className={styles.hl}>Regulation.</span>
           </h1>
 
           <p className={styles.lead}>
-            Access global financial markets through secure online trading platforms and manage your
-            investment portfolio in a regulated environment. 
+            Access global financial markets through secure online trading platforms within a regulated UAE framework. Providing access to established trading solutions that support disciplined market strategies. 
           </p>
 
           <div className={styles.ctaRow}>
@@ -37,7 +36,7 @@ export default function HomeHero() {
         <div className={styles.right}>
           <div className={styles.imageCard}>
             <Image
-              src="/images/homebanner.webp"
+              src="/images/herobannerHome.webp"
               alt="Trading app mockup showing live candlestick chart"
               width={820}
               height={980}

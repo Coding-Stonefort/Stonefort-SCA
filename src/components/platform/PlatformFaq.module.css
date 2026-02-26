@@ -5,15 +5,6 @@
   overflow:hidden;
 }
 
-/* soft center glow */
-/* .section::before{
-  content:"";
-  position:absolute;
-  inset:-200px;
-  background:
-    radial-gradient(800px 400px at 50% 30%, rgba(135,171,147,.12), transparent 60%);
-  pointer-events:none;
-} */
 
 .container{
   width:min(1100px, calc(100% - 32px));
@@ -111,4 +102,10 @@
   .header h2{
     font-size:26px;
   }
+}
+@media (max-width: 640px) {
+  .section{
+  padding: 30px 0 70px;
+
+}
 }

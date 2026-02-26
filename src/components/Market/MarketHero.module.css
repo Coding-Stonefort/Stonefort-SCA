@@ -14,7 +14,7 @@
 
 .grid{
   display: grid;
-  grid-template-columns: 1fr 1fr; /* left content, right empty */
+  grid-template-columns: 1fr 1fr; 
   align-items: center;
   gap: 28px;
   min-height: 420px;
@@ -120,15 +120,55 @@
 
 /* Responsive: keep right empty but stack nicely */
 @media (max-width: 900px){
+  /* make hero content stack */
   .grid{
     grid-template-columns: 1fr;
     min-height: auto;
     padding: 8px 0;
+    gap: 18px;
   }
-  .right{ display: none; }
+
+  /* IMPORTANT: stop background acting like a background on mobile */
+  .bg{
+    position: static;
+    inset: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+ .hero {
+  display: flex;
+  flex-direction: column;
+
+ }
+  .container{
+    order: 1;
+  }
+    .bg{
+    order: 2;
+  }
+  /* ensure content is on top and comes first */
+  .left{
+    order: 1;
+  }
+
+  /* give the image a normal height on mobile */
+  .bgImg{
+    position: relative !important; /* override next/image fill positioning */
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+
+  /* overlay not needed on mobile now */
   .overlay{
-    background:
-      radial-gradient(900px 520px at 50% 30%, rgba(77,110,85,.22), transparent 60%),
-      linear-gradient(180deg, rgba(16,23,17,.92) 0%, rgba(16,23,17,.70) 55%, rgba(16,23,17,.45) 100%);
+    display: none;
   }
+
 }
+@media (max-width: 600px){
+    .hero{
+      padding: 30px 16px;
+    }
+ }

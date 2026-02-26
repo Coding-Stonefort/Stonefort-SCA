@@ -175,3 +175,11 @@
   .grid{ grid-template-columns: 1fr; }
   .card{ padding: 16px; }
 }
+
+
+@media (max-width: 980px){
+   .section{
+  padding: 30px 16px 30px !important;
+
+}
+}

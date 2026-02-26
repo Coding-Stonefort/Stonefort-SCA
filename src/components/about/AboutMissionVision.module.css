@@ -55,9 +55,9 @@
 }
 
 /* Icon circle */
-.icon{
-  width: 64px;
-  height: 64px;
+.imageWrapper{
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;

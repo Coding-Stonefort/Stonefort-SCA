@@ -47,7 +47,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
 
@@ -149,6 +149,9 @@
 }
 
 @media (max-width: 640px) {
+  .section{
+  padding: 40px 0 30px;
+} 
   .grid {
     grid-template-columns: 1fr;
   }

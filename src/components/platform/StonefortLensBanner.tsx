@@ -14,14 +14,11 @@ export default function StonefortLensBanner() {
             </h2>
 
             <p className={styles.p}>
-              Experience a more complete and intuitive way to trade with Stonefort’s advanced trading
-              platforms. Access powerful charting, smart trade management, and integrated market
-              insights designed to help you analyse opportunities and manage trades with greater clarity.
+              Trade with clarity using Stonefort’s advanced platforms. Access powerful charts, intuitive trade management, and integrated market insights to analyse opportunities and manage positions efficiently. 
             </p>
 
             <p className={styles.p}>
-              Leverage dynamic charts, advanced tools, and community-inspired market intelligence to
-              refine your strategy and trade with confidence across global markets.
+              Leverage dynamic charts and advanced tools to refine your strategy and stay informed across global markets. 
             </p>
 
           </div>

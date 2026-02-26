@@ -9,12 +9,10 @@ export default function PlatformHero() {
         <div className={styles.left}>
           <div className={styles.kicker}>Platform</div>
 
-          <h1 className={styles.title}>Trading Platforms with Stonefort</h1>
+          <h1 className={styles.title}>Explore Our Trading Platforms </h1>
 
           <p className={styles.desc}>
-            Trade from our intuitive web terminal and responsive Stonefort Trader app to the globally
-            trusted MetaTrader 5 platform, choose from a suite of trading solutions designed to
-            elevate your trading experience across global markets.
+            Choose from our intuitive WebTrader, mobile app, MetaTrader 5, and AutoChartist. Powerful tools, real-time pricing, and seamless execution designed to support your trading journey.
           </p>
 
           <div className={styles.ctaRow}>
@@ -31,18 +29,14 @@ export default function PlatformHero() {
 
         {/* RIGHT */}
         <div className={styles.right} aria-hidden="true">
-          <div className={styles.mediaFrame}>
-            <Image
-              src="/images/platform/herobanner.webp"
-              alt=""
-              width={920}
-              height={720}
-              priority
-              className={styles.image}
-            />
-            <div className={styles.glowA} />
-            <div className={styles.glowB} />
-          </div>
+          <Image
+            src="/images/platform/platformHeroBanner.webp"
+            alt=""
+            width={1200}
+            height={900}
+            priority
+            className={styles.image}
+          />
         </div>
       </div>
     </section>
