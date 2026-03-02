@@ -36,7 +36,7 @@ export default function HomeHero() {
         <div className={styles.right}>
           <div className={styles.imageCard}>
             <Image
-              src="/images/herobannerHome.webp"
+              src="/images/mockupphone shiledgold andflag.webp"
               alt="Trading app mockup showing live candlestick chart"
               width={820}
               height={980}

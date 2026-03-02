@@ -6,7 +6,7 @@
   justify-content: center;
   background: #101711;
   overflow: hidden;
-  padding: 100px 0 60px;
+  padding: 56px 0 60px;
 }
 
 /* Background image */
@@ -82,43 +82,78 @@
   border-radius: 30px;
   font-size: 13px;
 }
-
-/* CTA */
+/* CTA ROW */
 .ctaRow {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 28px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
 }
 
+/* Base Button */
+.primaryBtn,
+.secondaryBtn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  min-height:46px;
+  padding:0 22px;
+  border-radius:14px;
+
+  font-weight:600;
+  font-size:18px;
+  text-decoration:none;
+  cursor:pointer;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+/* PRIMARY (White Premium Style) */
 .primaryBtn {
-  background: var(--sfs-green-main);
-  color: white;
-  padding: 12px 26px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
+  background:#fff;
+  color:#101711;
+  border:1px solid rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
 .primaryBtn:hover {
-  background: var(--sfs-green-1);
+  transform:translateY(-2px);
+  background:rgba(77,110,85,.30);
+  border-color:rgba(135,171,147,.45);
+  color:#fff;
+  box-shadow:0 18px 55px rgba(77,110,85,.35);
 }
 
+/* SECONDARY (Glass Green Style) */
 .secondaryBtn {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
-  padding: 12px 26px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  background:rgba(77,110,85,.30);
+  color:#fff;
+  border:1px solid rgba(135,171,147,.45);
+  box-shadow:0 14px 40px rgba(0,0,0,.14);
 }
 
 .secondaryBtn:hover {
-  border-color: var(--sfs-mint);
-  color: var(--sfs-mint);
+  transform:translateY(-2px);
+  background:#fff;
+  color:#101711;
+  border-color:rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
+/* Mobile Full Width */
+@media (max-width:560px){
+  .primaryBtn,
+  .secondaryBtn{
+    width:100%;
+  }
+}
 .featuresRow {
   display: flex;
   gap: 20px;
@@ -137,6 +172,7 @@
   max-width: 650px;
   height: auto;
   filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6));
+  transform: scale(1.3);
 }
 
 /* Bottom Meta Bar */

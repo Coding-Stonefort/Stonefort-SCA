@@ -25,7 +25,7 @@ export default function AccountTiers() {
         <div className={styles.right}>
           <div className={styles.imageWrap}>
             <Image
-              src="/images/accounts/accounttier.webp"   // place inside /public
+              src="/images/accounts/PackagesDesign.webp"   // place inside /public
               alt="Stonefort Account Tiers"
               fill
               priority

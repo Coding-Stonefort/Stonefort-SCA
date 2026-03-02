@@ -1,27 +1,36 @@
+/* =========================================================
+   HERO (Aligned to Stonefort Master Style Spec)
+   - Uses existing tokens only
+   - Does NOT change :root
+   - Does NOT reduce image size
+========================================================= */
+
 .hero{
   position: relative;
   padding: 88px 0 82px;
-  background: var(--sfs-black);
+  background: var(--background); /* was var(--sfs-black) */
   overflow: hidden;
 }
 
-
-
+/* Container width standard (spec) */
 .container{
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
+
   display: grid;
-
-
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 34px;
+
+  position: relative;
+  z-index: 1;
 }
 
 .left{
   max-width: 640px;
 }
 
+/* Kicker stays as your hero micro-UI */
 .kicker{
   display:inline-flex;
   align-items:center;
@@ -29,75 +38,106 @@
   font-size: 12px;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: rgba(136,145,139,.95);
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
+/* Section heading spec (token-based) */
 .title{
   margin: 0 0 14px;
-  font-size: 44px;
-  line-height: 1.06;
-  font-weight: 760;
-  color: #fff;
+  font-size: var(--section-title-size);
+  font-weight: 900; /* spec range 850-950 */
+  line-height: 1.10; /* spec range 1.08-1.15 */
+  color: var(--foreground);
 }
 
+/* Section sub text spec (token-based) */
 .desc{
   margin: 0 0 22px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: rgba(136,145,139,.98);
+  font-size: var(--section-sub-size);
+  line-height: 1.70; /* spec range 1.6-1.75 */
+  color: rgba(234,240,242,.86); /* spec rgba range */
   max-width: 58ch;
 }
 
+/* =========================================================
+   BUTTONS — Map your existing .primary/.secondary to Master Button System
+   (No TSX changes needed)
+========================================================= */
+
 .ctaRow{
   display:flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap:14px;              /* matches .btnRow */
+  flex-wrap:wrap;
+  align-items:center;
   margin-bottom: 16px;
 }
 
+/* Base button (matches .sfsBtn) */
 .primary,
 .secondary{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  height: 44px;
-  padding: 0 18px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 650;
+  gap:10px;
+
+  min-height:46px;
+  padding: 0 22px;
+  border-radius:14px;
+
+  font-weight:600;
+  font-size:18px;
   text-decoration:none;
-  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
 }
 
+/* Primary = White */
 .primary{
-  color:#fff;
-  background: linear-gradient(180deg, rgba(77,110,85,.95), rgba(77,110,85,.72));
-  box-shadow: 0 14px 34px rgba(0,0,0,.35);
+  background:#fff;
+  color:#101711;
+  border:1px solid rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
 .primary:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 18px 40px rgba(0,0,0,.42);
+  transform:translateY(-2px);
+  background:rgba(77,110,85,.30);
+  border-color:rgba(135,171,147,.45);
+  color:#fff;
+  box-shadow:0 18px 55px rgba(77,110,85,.35);
 }
 
+/* Secondary = Glass Green */
 .secondary{
+  background:rgba(77,110,85,.30);
   color:#fff;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
+  border:1px solid rgba(135,171,147,.45);
+  box-shadow:0 14px 40px rgba(0,0,0,.14);
 }
 
 .secondary:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.18);
+  transform:translateY(-2px);
+  background:#fff;
+  color:#101711;
+  border-color:rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
+
+/* =========================================================
+   Meta row (keep your UI but align to tokens)
+========================================================= */
 
 .meta{
   display:flex;
   align-items:center;
   gap: 10px;
-  color: rgba(136,145,139,.95);
+  color: var(--muted);
   font-size: 13px;
 }
 
@@ -105,16 +145,18 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: rgba(135,171,147,.9);
+  background: var(--sfs-mint);
   box-shadow: 0 0 0 4px rgba(135,171,147,.12);
 }
 
+/* =========================================================
+   Right / Image (UNCHANGED SIZE LOGIC)
+========================================================= */
 
 .right{
   display:flex;
   justify-content:flex-end;
   align-items:center;
-
   overflow: visible;
 }
 
@@ -123,11 +165,12 @@
   height: auto;
   object-fit: contain;
 
-  transform: translate(160px, 8px) scale(1.42);
+  /* keep your big mockup sizing */
+  transform: translate(160px, 8px) scale(1.72);
   transform-origin: right center;
 }
 
-/* glows kept inside middle (not top/bottom heavy) */
+/* Glows OK (already Stonefort vibe) */
 .glowA,
 .glowB{
   content:"";
@@ -150,20 +193,28 @@
   opacity: .85;
 }
 
-/* Responsive */
+/* =========================================================
+   Responsive
+========================================================= */
+
 @media (max-width: 980px){
   .container{
     grid-template-columns: 1fr;
     gap: 22px;
   }
+
   .right{
     justify-content: flex-start;
   }
-  .title{
-    font-size: 38px;
-  }
-  .mediaFrame{
-    width: min(640px, 100%);
+
+  /* keep token sizing; just let layout breathe */
+}
+
+@media (max-width: 560px){
+  /* Master spec: full width buttons */
+  .primary,
+  .secondary{
+    width:100%;
   }
 }
 
@@ -171,17 +222,10 @@
   .hero{
     padding: 64px 0 30px;
   }
-  .title{
-    font-size: 32px;
+
+  /* do NOT reduce image size — keep your big mockup */
+  .image{
+    transform: translate(70px, 8px) scale(1.42);
+    transform-origin: right center;
   }
-  .primary, .secondary{
-    width: 100%;
-  }
-  
-.image{
-
-
-  transform: translate(70px, 8px) scale(1.42);
-
-}
 }

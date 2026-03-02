@@ -1,6 +1,12 @@
 .section{
-  padding: 70px 0 90px;
-  background: var(--sfs-black);
+  padding: 56px 16px;
+  background: var(--background);
+}
+
+@media (max-width: 600px){
+  .section{
+    padding: 40px 16px;
+  }
 }
 
 .container{
@@ -15,15 +21,13 @@
   overflow: hidden;
   padding: 78px 44px;
 
-  /* background image inside the rounded container */
   background-image: url("/images/platform/maximiseTrading.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* depth */
   box-shadow: 0 40px 140px rgba(0,0,0,.55);
-  border: 1px solid rgba(255,255,255,.10);
+  border: 1px solid rgba(135,171,147,.18);
 }
 
 /* dark overlay + soft green tint */
@@ -36,7 +40,7 @@
   pointer-events:none;
 }
 
-/* text center like screenshot */
+/* content */
 .content{
   position: relative;
   z-index: 1;
@@ -45,80 +49,102 @@
   margin: 0 auto;
 }
 
-/* Big title */
+/* Big headline (hero-level but aligned) */
 .title{
   margin: 0 0 18px;
-  color: #fff;
-  font-size: 58px;
-  line-height: 1.02;
-  font-weight: 860;
+  color: var(--foreground);
+  font-size: 56px;
+  line-height: 1.05;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 
-/* “Stonefort” green */
 .title span{
-  color: rgba(136,171,147,.85);
+  color: var(--sfs-mint);
 }
 
-/* Lens on next line */
 .accent{
-  color: rgba(136,171,147,.85);
+  color: var(--sfs-mint);
   display: inline-block;
   margin-top: 6px;
 }
 
+/* Paragraph aligned with section-sub sizing */
 .p{
   margin: 0 auto 14px;
-  color: rgba(255,255,255,.88);
-  font-size: 18px;
+  color: rgba(234,240,242,.85);
+  font-size: var(--section-sub-size);
   line-height: 1.75;
-  max-width: 104ch;
+  max-width: 90ch;
 }
 
-/* CTA */
+/* CTA Row */
 .ctaRow{
   margin-top: 22px;
   display:flex;
   justify-content:center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
+
+/* =========================
+   MASTER BUTTON STYLE
+   (Font forced to 16px)
+========================= */
 
 .primary,
 .secondary{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  height: 46px;
+  gap:10px;
+
+  min-height:46px;
   padding: 0 22px;
-  border-radius: 14px;
+  border-radius:14px;
+
   text-decoration:none;
-  font-size: 14px;
-  font-weight: 650;
-  transition: transform .15s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  font-size: 16px;      /* ✅ per your rule */
+  font-weight: 600;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
 }
 
+/* Primary = White */
 .primary{
-  color:#fff;
-  background: linear-gradient(180deg, rgba(77,110,85,.95), rgba(77,110,85,.72));
-  box-shadow: 0 16px 44px rgba(0,0,0,.45);
+  background:#fff;
+  color:#101711;
+  border:1px solid rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
 .primary:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 20px 56px rgba(0,0,0,.55);
+  transform:translateY(-2px);
+  background:rgba(77,110,85,.30);
+  border-color:rgba(135,171,147,.45);
+  color:#fff;
+  box-shadow:0 18px 55px rgba(77,110,85,.35);
 }
 
+/* Secondary = Glass Green */
 .secondary{
+  background:rgba(77,110,85,.30);
   color:#fff;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.18);
+  border:1px solid rgba(135,171,147,.45);
+  box-shadow:0 14px 40px rgba(0,0,0,.14);
 }
 
 .secondary:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.10);
-  border-color: rgba(255,255,255,.24);
+  transform:translateY(-2px);
+  background:#fff;
+  color:#101711;
+  border-color:rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
 /* Responsive */
@@ -129,22 +155,15 @@
   }
 
   .title{
-    font-size: 44px;
-  }
-
-  .p{
-    font-size: 16px;
+    font-size: 42px;
   }
 }
 
 @media (max-width: 520px){
-  .section{
-  padding: 30px 0 30px;
-
-}
   .title{
     font-size: 34px;
   }
+
   .primary, .secondary{
     width: 100%;
   }

@@ -80,7 +80,9 @@ export default function Footer() {
         {/* Legal / risk */}
         <div className={styles.legalBox}>
           <p className={styles.legalText}>
-            Stonefort Securities LLC (SFS) is licensed by the Capital Market Authority (CMA), UAE, under Category 5 (License No. 20200000226). SFS is authorized solely to conduct marketing and promotional activities and to introduce clients to financial products and services offered by duly licensed entities. SFS does not provide investment services.
+            Stonefort Securities LLC is licensed by the Capital Market Authority, UAE, under Category 5 (License No. 20200000226). Stonefort Securities LLC is authorized solely to conduct financial advisory, promotional, and client introduction activities in relation to financial products and services offered by Stonefort Securities Ltd.  
+
+<br/><br/>Stonefort Securities LLC does not hold client funds or execute trades; its role is strictly limited to financial awareness and client introductions within the approved regulatory framework.  
           </p>
         </div>
 
@@ -90,7 +92,7 @@ export default function Footer() {
             Copyright © {new Date().getFullYear()} Stonefort. All rights reserved.
           </div>
 
-          <div className={styles.bottomLinks}>
+          {/* <div className={styles.bottomLinks}>
             <Link href="/privacy-policy" className={styles.bottomLink}>
               Privacy Policy
             </Link>
@@ -100,7 +102,7 @@ export default function Footer() {
             <Link href="/risk-disclosure" className={styles.bottomLink}>
               Risk Disclosure
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

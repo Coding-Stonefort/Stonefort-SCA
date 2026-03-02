@@ -3,22 +3,22 @@ import Image from "next/image";
 
 const items = [
   {
-    icon: "/images/spreadmeta.webp",
+    icon: "/images/spreadhome.webp",
     value: "Narrow Spread",
     label: "Spread",
   },
   {
-    icon: "/images/leveragemeta.webp",
+    icon: "/images/homeleveragemeta.webp",
     value: "1:500",
     label: "Leverage",
   },
   {
-    icon: "/images/regulatedmeta.webp",
+    icon: "/images/homeregulated.webp",
     value: "100%",
     label: "Regulated",
   },
   {
-    icon: "/images/supportmeta.webp",
+    icon: "/images/homesupport.webp",
     value: "24/7 Multilingual",
     label: "Customer Support",
   },

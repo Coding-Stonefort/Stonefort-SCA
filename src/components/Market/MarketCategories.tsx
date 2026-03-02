@@ -17,6 +17,9 @@ export default function CFDMarketsPro() {
         <a className={styles.browse} href="/market">
           Browse all markets →
         </a>
+                <p className={styles.disclaimer}>
+  Disclaimer: All market data is provided for informational purposes only and does not constitute an offer or solicitation of trading services.
+</p>
       </div>
     </section>
   );

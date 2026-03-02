@@ -9,7 +9,7 @@ export default function MarketHero() {
       <div className={styles.bg} aria-hidden="true">
         <div className={styles.mobileImgWrap}>
           <Image
-            src="/images/market/MarketHerobanner.webp"
+            src="/images/market/Phoneplusgoldslverandoil.webp"
             alt=""
             fill
             priority

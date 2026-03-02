@@ -19,7 +19,7 @@ export default function HeroAccounts() {
           <span className={styles.tag}>ACCOUNT TYPES</span>
 
           <h1 className={styles.title}>
-            Pick the account <br /> that fits you.
+           One Account. Total Market Access. 
           </h1>
 
           <p className={styles.desc}>
@@ -58,7 +58,8 @@ export default function HeroAccounts() {
       height={60}
       className={styles.metaIcon}
     />
-    <strong>0.4 Pip</strong>
+    <strong>
+Narrow Spread</strong>
     <span>Spread</span>
   </div>
 

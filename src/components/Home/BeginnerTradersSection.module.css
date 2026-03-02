@@ -10,7 +10,7 @@
 
   background: var(--background);
   color: var(--text);
-  padding: 56px 16px;
+  padding: 56px 16px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -73,7 +73,7 @@
 .subtext{
   margin: 0 auto;
   max-width: 760px;
-  color: var(--muted);
+
   font-size: 15px;
   line-height: 1.65;
 }
@@ -139,8 +139,8 @@
 /* Content blocks */
 .iconWrap{
   position: relative;
-  width: 78px;
-  height: 78px;
+  width: 100px;
+  height: 100px;
   display: grid;
   place-items: center;
   border-radius: 16px;
@@ -161,8 +161,8 @@
 }
 
 .icon{
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   filter: drop-shadow(0 14px 30px rgba(0,0,0,.35));
 }
@@ -170,17 +170,17 @@
 .cardTitle{
   position: relative;
   margin: 0 0 6px;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
   color: var(--text);
 }
 
 .cardDesc{
   position: relative;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
+  line-height: var(--card-desc-lh);
+  font-size: var(--card-desc-size);
+  /* color: var(--muted); */
   min-height: 46px;
 }
 
@@ -239,25 +239,37 @@
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  padding: 0 18px;
+  padding: 0 22px;
   border-radius: 14px;
-  background: var(--sfs-green-main);
-  color: #fff;
-  font-weight: 800;
+
+  font-weight: 600;
+  font-size: 18px;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,.35);
-  box-shadow: 0 18px 50px rgba(77,110,85,.26);
+
+  /* Default = White */
+  background: #fff;
+  color: #101711;
+  border: 1px solid rgba(135,171,147,.30);
+
+  box-shadow: 0 16px 45px rgba(0,0,0,.18);
 
   transition:
     transform .4s cubic-bezier(.22,.61,.36,1),
-    filter .2s ease,
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
     box-shadow .3s ease;
 }
 
 .primaryBtn:hover{
   transform: translateY(-2px);
-  filter: brightness(1.06);
-  box-shadow: 0 22px 70px rgba(77,110,85,.30);
+
+  /* Soft Stonefort glass green */
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
+  color: #fff;
+
+  box-shadow: 0 18px 55px rgba(77,110,85,.35);
 }
 
 /* Responsive columns */

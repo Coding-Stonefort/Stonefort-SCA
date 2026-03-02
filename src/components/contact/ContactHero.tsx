@@ -16,11 +16,11 @@ export default function ContactHero() {
               CONTACT STONEFORT
             </div>
 
-            <h1 className={styles.h1}>Send Us a Message</h1>
+            <h1 className={styles.h1}>Get in Touch with Stonefort 
+</h1>
 
             <p className={styles.lead}>
-              Whether you’re new to CPT Mena or an experienced trader, fill out
-              the form below and we’ll respond promptly.
+              Whether you are new to Stonefort Securities or an experienced trader, fill out the form below and our team will respond promptly.
             </p>
 
             <div className={styles.glassCard}>

@@ -135,9 +135,7 @@ export default function MarketBoard() {
 
           <TvSymbolInfo symbol={activeSymbol} />
 
-          <p className={styles.smallNote}>
-            Disclaimer: All market data is provided for informational purposes only and does not constitute an offer or solicitation of trading services.
-          </p>
+            
         </div>
 
         {/* Right chart */}

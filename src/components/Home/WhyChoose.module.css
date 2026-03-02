@@ -1,23 +1,29 @@
 /* WhyChoose.module.css */
 
 .section{
-  padding: 56px 0 56px;
+  padding: 56px 0 20px;
   background: var(--background);
   position: relative;
   overflow: hidden;
 }
 
-/* subtle green glow like premium fintech */
 .section::before{
   content:"";
   position:absolute;
-  inset: -180px -120px auto -120px;
-  height: 520px;
-  /* background:
-    radial-gradient(closest-side, rgba(135,171,147,.20), transparent 65%),
-    radial-gradient(closest-side, rgba(77,110,85,.16), transparent 70%); */
-  filter: blur(10px);
+  inset:0;
   pointer-events:none;
+
+  background:
+    radial-gradient(
+      900px 520px at 20% 55%,     /* LEFT + CENTER */
+      rgba(135,171,147,.22),
+      transparent 65%
+    ),
+    radial-gradient(
+      700px 400px at 55% 60%,     /* CENTER soft glow */
+      rgba(77,110,85,.18),
+      transparent 70%
+    );
 }
 
 .container{
@@ -115,7 +121,8 @@
 
 .cardTitle{
   margin: 0;
-  font-size: 15.5px;
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
   font-weight: 900;
   letter-spacing: .15px;
   color: #fff;
@@ -123,11 +130,10 @@
 
 .cardDesc{
   margin: 0;
-  line-height: 1.55;
-  font-size: 13.6px;
+  line-height: var(--card-desc-lh);
+  font-size: var(--card-desc-size);
   color: var(--muted);
-
-  flex: 1; 
+  flex: 1;
 }
 
 /* When in view → animate in with stagger */
@@ -155,14 +161,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 12px 18px;
   border-radius: 14px;
-  font-weight: 900;
-  background: var(--sfs-mint);
-  color: #fff;
-  min-width: 210px;
-  box-shadow: 0 16px 50px rgba(0,0,0,.35);
+  font-weight: 600;
+  font-size: 18px;
   text-decoration: none;
+  min-width: 210px;
+
+  /* Default = White */
+  background: #fff;
+  color: #101711;
+  border: 1px solid rgba(135,171,147,.30);
+
+  box-shadow: 0 16px 50px rgba(0,0,0,.25);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+.ctaBtn:hover{
+  transform: translateY(-2px);
+
+  /* Swap to soft green glass */
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
+  color: #fff;
+
+  box-shadow: 0 18px 55px rgba(77,110,85,.35);
 }
 
 .ctaNote{

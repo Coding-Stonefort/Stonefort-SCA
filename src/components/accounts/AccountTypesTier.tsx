@@ -49,7 +49,7 @@ export default function AccountTypesTier() {
       <div className={styles.container}>
         <header className={styles.head}>
           <p className={styles.kicker}>Account Types</p>
-          <h2 className={styles.title}>Choose the account that fits your strategy</h2>
+          <h2 className={styles.title}>Explore Your Trading Accounts </h2>
           <p className={styles.sub}>
             Our range of Stonefort account types allows every trader to find the right fit for their
             strategy. Compare minimum deposits, spreads, leverage, and commissions below to select

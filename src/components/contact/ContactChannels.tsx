@@ -26,14 +26,14 @@ const channels: Channel[] = [
   },
   {
     title: "Support",
-    value: "support@stonefortsecurities.com",
+    value: "support@stonefort.ae",
     icon: "/images/contact/support.webp",
     type: "email",
   },
   {
     title: "Contact",
     value: "+971-4-564 6888",
-    icon: "/images/contact/contact.webp", // (use your headset icon image here)
+    icon: "/images/contact/contact.webp", 
     type: "phone",
   },
 ];

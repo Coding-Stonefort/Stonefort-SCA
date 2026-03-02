@@ -11,30 +11,30 @@ type Card = {
 const cards: Card[] = [
   {
     title: "User-Friendly Demo",
-    desc: "Practice trading and get familiar with the platform in a risk-free environment.",
-    icon: { src: "/images/User-Friendly-Demo.webp", alt: "Demo trading icon" },
-    cta: { label: "Try Demo", href: "/demo" },
+    desc: "Practice trading and familiarise yourself with the platform in a risk-free environment.",
+    icon: { src: "/images/userfriendlydemo.webp", alt: "Demo trading icon" },
+   
   },
   {
     title: "Educational Resources",
-    desc: "Access courses, webinars, quizzes, and videos to master essential trading concepts.",
+    desc: "Access courses, webinars, quizzes, and videos to understand key trading concepts.",
     icon: { src: "/images/Educational-Resources.webp", alt: "Education and resources icon" },
-    cta: { label: "Learn More", href: "/education" },
+  
   },
   {
     title: "24/7 Support",
-    desc: "Get assistance anytime via our approved support channels.",
-    icon: { src: "/images/supportmeta.webp", alt: "Customer support icon" },
+    desc: "Receive assistance through approved channels from our support team at any time. ",
+    icon: { src: "/images/Customer-Support-icon.webp", alt: "Customer support icon" },
   },
   {
     title: "Flexible Position Sizing",
-    desc: "Adjust trade sizes to manage exposure according to your risk comfort.",
-    icon: { src: "/images/flexible-position.webp", alt: "Position sizing icon" },
+    desc: "Manage your exposure with flexible trade sizes in line with your risk comfort.",
+    icon: { src: "/images/Flexible-Position-icon.webp", alt: "Position sizing icon" },
   },
   {
     title: "Risk-Management Tools",
-    desc: "Use tools like stop-loss orders to help control potential losses",
-    icon: { src: "/images/Risk-Management.webp", alt: "Risk management icon" },
+    desc: "Apply tools such as stop-loss orders to help manage potential losses.",
+    icon: { src: "/images/homeregulated.webp", alt: "Risk management icon" },
   },
 ];
 

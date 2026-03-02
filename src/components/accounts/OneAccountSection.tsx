@@ -16,7 +16,7 @@ export default function OneAccountSection() {
             <div className={styles.card}>
               <h3>Fast & Effortless Sign-Up</h3>
               <p>
-                Create your trading account in under 10 minutes with our fully secure online registration – simple, smooth, and fully compliant.
+                Create your trading account in under 10 minutes with our fully secure online registration simple, smooth, and fully compliant.
               </p>
             </div>
 
@@ -57,7 +57,11 @@ export default function OneAccountSection() {
       </div>
 
       <div className={styles.ctaWrap}>
-        <button className={styles.cta}>Trade Now</button>
+        <div className={styles.btnRow}>
+  <a href="/accounts/live" className={`${styles.sfsBtn} ${styles['sfsBtn--primary']}`}>
+    Trade Now
+  </a>
+</div>
       </div>
 
     </section>

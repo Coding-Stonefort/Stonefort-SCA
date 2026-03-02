@@ -6,19 +6,19 @@ import { useEffect, useRef, useState } from "react";
 const cards = [
   {
     title: "Advanced Charting Tools & Indicators",
-    desc: "Access intuitive charts, drawing tools, and 100+ technical indicators to support market analysis and informed trading decisions.",
+    desc: "Use intuitive charts with drawing tools and over 100 technical indicators to support your market analysis and trading decisions.",
   },
   {
     title: "Flexible Leverage",
-    desc: "Control larger positions with smaller margin on selected markets. Leverage increases both potential profits and losses, with limits based on regulatory requirements and client classification.",
+    desc: "Leverage allows you to control larger positions with a smaller margin on selected markets. Leverage magnifies both potential profits and potential losses. Applicable limits depend on regulatory requirements and client classification. ",
   },
   {
     title: "Proprietary Analytics",
-    desc: "Monitor your trading performance with built-in insights that help you refine strategies and review your activity.",
+    desc: "Track your trading performance with in-platform insights designed to help you refine your strategies and review your trading activity.",
   },
   {
     title: "Customisable Price Alerts",
-    desc: "Set alerts on your chosen instruments to stay updated on market movements and support timely trading decisions.",
+    desc: "Set price alerts for your chosen instruments to stay informed of market movements and manage your trading strategy effectively.",
   },
 ];
 

@@ -1,108 +1,140 @@
-/* InspireConfidence.module.css */
+/* InspireConfidence.module.css — same styling as LiveAccountFeatures */
 
 .section{
-  position: relative;
-  padding: 88px 0 104px;
-  background: var(--sfs-black);
-  overflow: hidden;
+  background: var(--background);
+  padding:56px 16px;
+  position:relative;
+  overflow:hidden;
+}
+
+@media (max-width: 600px){
+  .section{ padding:40px 16px; }
 }
 
 .container{
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  position:relative;
+  z-index:1;
 }
 
 .head{
   text-align:center;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
 }
 
 .title{
-  margin: 0;
-  font-size: 46px;
-  line-height: 1.06;
-  font-weight: 820;
-  color:#fff;
+  font-size: var(--section-title-size);
+  font-weight: 900;
+  line-height: 1.12;
+  color: var(--foreground);
+  margin: 0 0 12px;
 }
 
 .title span{
   color: var(--sfs-mint);
-  font-weight: 820;
+  font-weight: 900;
 }
 
-/* ✅ ONE GRID (3x2) so all six align */
+/* grid */
 .grid{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 28px;
+  margin-top: 26px;
 }
 
-/* CARD */
+/* card */
 .card{
-  position: relative;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.15);
   border-radius: 18px;
-  padding: 22px 18px 20px;
-  text-align: center;
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
 
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 22px 70px rgba(0,0,0,.38);
-  overflow: hidden;
+  padding: 32px 26px;
+  text-align:center;
 
-  transition: transform .16s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  overflow:hidden;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
 .card:hover{
-  transform: translateY(-3px);
-  background: rgba(255,255,255,.055);
-  border-color: rgba(135,171,147,.34);
-  box-shadow: 0 30px 90px rgba(0,0,0,.44);
+  transform: translateY(-4px);
+  border-color: var(--sfs-green-main);
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.30),
+    0 0 0 1px rgba(77,110,85,.25);
 }
 
-.badge{
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 14px;
-  border-radius: 999px;
+/* icon block (same as your good section) */
+.iconWrap{
+  width: 80px;
+  height: 80px;
   display:grid;
   place-items:center;
+  border-radius:16px;
+  margin: 0 auto 18px;
 
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  overflow: hidden;
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+
+  position:relative;
 }
 
-.badgeImgWrap{
-  position: relative;
-  width: 44px;
-  height: 44px;
+.iconImage{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,.35));
+  transition: transform .35s cubic-bezier(.22,.61,.36,1);
+  position:relative;
+  z-index:2;
 }
 
-.badgeImg{
-  object-fit: contain;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
-  transform: translateZ(0);
+.card:hover .iconImage{
+  transform: translateY(-2px) scale(1.04);
 }
 
+.iconGlow{
+  position:absolute;
+  inset:-18px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(135,171,147,.22),
+    rgba(16,23,17,0) 70%
+  );
+  filter: blur(14px);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* typography */
 .cardTitle{
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
+  font-weight: 900;
+  color: var(--foreground);
   margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 780;
-  color:#fff;
 }
 
 .cardDesc{
+  font-size: var(--card-desc-size);
+  line-height: var(--card-desc-lh);
+  color: rgba(234,240,242,.75);
   margin: 0 auto;
   max-width: 30ch;
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: rgba(136,145,139,.98);
 }
 
-/* subtle mint edge glow */
+/* optional glow (keep if you want) */
 .cardGlow{
   position:absolute;
   inset:-70px -90px auto -90px;
@@ -113,14 +145,11 @@
   pointer-events:none;
 }
 
-/* Responsive */
-@media (max-width: 1100px){
-  .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .title{ font-size: 40px; }
+/* responsive */
+@media (max-width: 992px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 520px){
-  .section{ padding: 50px 0 30px; }
+@media (max-width: 620px){
   .grid{ grid-template-columns: 1fr; }
-  .title{ font-size: 32px; }
 }

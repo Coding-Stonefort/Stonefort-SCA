@@ -97,10 +97,10 @@
 
 .rail{
   position: absolute;
-  left: 30px;
-  top: 14px;
+  left: 40px;
+  top: 23px;
   bottom: 14px;
-  width: 2px;
+  width: 1px;
   border-radius: 999px;
   background: linear-gradient(
     to bottom,
@@ -117,7 +117,7 @@
   padding: 16px 0;
 }
 
-.dot{
+ .dot{
   width: 44px;
   height: 44px;
   border-radius: 999px;
@@ -131,7 +131,7 @@
   box-shadow: 0 22px 60px rgba(77,110,85,.16);
   position: relative;
   z-index: 1;
-}
+} 
 
 .itemBody{
   border-radius: 18px;

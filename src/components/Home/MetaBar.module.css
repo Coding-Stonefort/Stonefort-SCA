@@ -1,11 +1,11 @@
 /* Non-movable (sticky) meta bar */
 .wrap{
-  position: sticky;
-  top: 0;                 /* if you want it under header later, we can set top: var(...) */
+  /* position: sticky; */
+  top: 0;
   z-index: 40;
-  background: rgba(16,23,17,.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+
+  background: #ffffff;
+  border-bottom: 1px solid #e8ecef;
 }
 
 /* width container */
@@ -25,28 +25,20 @@
   gap: 12px;
   padding: 12px 12px;
   border-radius: 18px;
-  /* background: rgba(255,255,255,.02); */
-  border: 1px solid rgba(255,255,255,.06);
-  box-shadow: 0 14px 40px rgba(0,0,0,.25);
+
+  background: #f8faf9;
+  border: 1px solid #e6ece8;
+  box-shadow: 0 8px 20px rgba(0,0,0,.04);
+
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
 
-/* .iconWrap{
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: rgba(255,255,255,.02);
-  border: 1px solid rgba(255,255,255,.06);
-  overflow: hidden; 
-} */
+.item:hover{
+  background: #f2f6f3;
+  border-color: #d7e2dc;
+  transform: translateY(-2px);
+}
 
-/* .icon{
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  display: block;
-} */
 .text{
   display: flex;
   flex-direction: column;
@@ -57,13 +49,14 @@
 .value{
   font-weight: 900;
   letter-spacing: .2px;
-  color: var(--foreground);
+  color: #1a202c;
   font-size: 15px;
 }
 
 .label{
-  color: var(--muted);
+  color: #6b7280;
   font-size: 12px;
+  padding-top: 4px;
 }
 
 /* responsive */

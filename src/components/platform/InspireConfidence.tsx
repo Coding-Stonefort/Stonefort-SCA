@@ -55,16 +55,17 @@ function Card({ title, desc, img, alt }: CardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.badge} aria-hidden="true">
-        <div className={styles.badgeImgWrap}>
-          <Image
-            src={img}
-            alt={alt}
-            fill
-            sizes="44px"
-            className={styles.badgeImg}
-            priority
-          />
-        </div>
+        <div className={styles.iconWrap}>
+  <Image
+    src={img}
+    alt={alt}
+    width={90}
+    height={90}
+    className={styles.iconImage}
+    priority
+  />
+  <span className={styles.iconGlow} aria-hidden="true" />
+</div>
       </div>
 
       <h3 className={styles.cardTitle}>{title}</h3>

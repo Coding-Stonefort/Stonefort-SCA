@@ -39,16 +39,14 @@
 .title{
   margin:0 0 10px;
   color:#fff;
-  font-size: clamp(26px, 2.6vw, 40px);
+  font-size: var(--section-title-size);
   line-height: 1.15;
   font-weight: 680;
 }
-
 .subtext{
   margin:0;
-  color: rgba(136,145,139,.92);
   max-width: 70ch;
-  font-size: 15px;
+  font-size: var(--section-sub-size);
   line-height: 1.7;
 }
 
@@ -104,15 +102,16 @@
 .cardTitle{
   margin: 14px 0 8px;
   color:#fff;
-  font-size: 18px;
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
   font-weight: 650;
 }
 
 .cardText{
   margin:0;
-  color: rgba(136,145,139,.92);
-  font-size: 14.5px;
-  line-height: 1.7;
+  color: rgba(234, 240, 242, .92);
+  font-size: var(--card-desc-size);
+  line-height: var(--card-desc-lh);
   min-height: 48px;
 }
 
@@ -126,7 +125,8 @@
   border-radius: 999px;
   text-decoration:none;
   color: #fff;
-  font-weight: 650;
+    font-weight: 600;
+  font-size: 16px;
   border: 1px solid rgba(135,171,147,.38);
   background: rgba(77,110,85,.22);
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
@@ -134,8 +134,9 @@
 
 .cta:hover{
   transform: translateY(-1px);
-  background: rgba(77,110,85,.30);
+  background: #fff;
   border-color: rgba(135,171,147,.55);
+  color: #101711;;
 }
 
 .arrow{

@@ -1,136 +1,166 @@
-.section {
-  background: #101711;
-  padding: 90px 0;
-  position: relative;
+/* =========================
+   UPDATED TO STONEFORT MASTER STYLE SPEC
+   (Do NOT edit :root tokens)
+========================= */
+
+.section{
+  background: var(--background); /* stays dark theme */
+  padding:56px 16px;
+  position:relative;
+  overflow:hidden;
 }
 
-.container {
+@media (max-width: 600px){
+  .section{
+    padding:40px 16px;
+  }
+}
+
+.container{
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
+  position:relative;
+  z-index:1;
 }
 
-.head {
-  text-align: center;
-  margin-bottom: 60px;
+/* Head */
+.head{
+  text-align:center;
+  margin-bottom: 22px;
 }
 
-.kicker {
+.kicker{
   color: var(--sfs-mint);
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: .18em;
   text-transform: uppercase;
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.title {
-  font-size: 36px;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 14px;
+.title{
+  font-size: var(--section-title-size);
+  font-weight: 900;
+  line-height: 1.12;
+  color: var(--foreground);
+  margin: 0 0 12px;
 }
 
-.sub {
-  color: var(--sfs-grey);
-  font-size: 15px;
+.sub{
+  font-size: var(--section-sub-size);
+  line-height: 1.7;
+  color: rgba(234,240,242,.78);
   max-width: 70ch;
   margin: 0 auto;
-  line-height: 1.8;
 }
 
-.grid {
-  display: grid;
+/* Grid */
+.grid{
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  margin-top: 26px;
 }
 
-.card {
-  background: rgba(16, 23, 17, 0.65);
-  border: 1px solid rgba(135, 171, 147, 0.15);
-  border-radius: 20px;
-  padding: 36px 28px;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+/* Card (Master Spec) */
+.card{
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.15);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+
+  padding: 32px 26px;
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  overflow:hidden;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(135, 171, 147, 0.4);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+.card:hover{
+  transform: translateY(-4px);
+  border-color: var(--sfs-green-main);
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.30),
+    0 0 0 1px rgba(77,110,85,.25);
 }
 
-.iconWrap {
-  position: relative;
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 24px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Icon block (Master Spec, but keeps your glow layer) */
+.iconWrap{
+  width: 80px;
+  height: 80px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  margin: 0 auto 18px;
+
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+
+  position:relative;
 }
 
-.iconImage {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-  z-index: 2;
-  filter: drop-shadow(0 12px 28px rgba(135, 171, 147, 0.35));
-  transition: transform 0.3s ease;
+.iconImage{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,.35));
+  transition: transform .35s cubic-bezier(.22,.61,.36,1);
+  position:relative;
+  z-index:2;
 }
 
-.card:hover .iconImage {
-  transform: scale(1.08);
+.card:hover .iconImage{
+  transform: translateY(-2px) scale(1.04);
 }
 
-.iconGlow {
-  position: absolute;
-  inset: -20px;
-  border-radius: 50%;
+/* Optional glow (kept, aligned to theme) */
+.iconGlow{
+  position:absolute;
+  inset:-18px;
+  border-radius: 999px;
   background: radial-gradient(
     circle,
-    rgba(135, 171, 147, 0.25),
-    rgba(16, 23, 17, 0) 70%
+    rgba(135,171,147,.22),
+    rgba(16,23,17,0) 70%
   );
-  filter: blur(12px);
-  z-index: 1;
-  pointer-events: none;
+  filter: blur(14px);
+  z-index:1;
+  pointer-events:none;
 }
 
-.cardTitle {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 12px;
+/* Card typography (Master Spec) */
+.cardTitle{
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
+  font-weight: 900;
+  color: var(--foreground);
+  margin: 0 0 10px;
 }
 
-.cardDesc {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-  line-height: 1.7;
+.cardDesc{
+  font-size: var(--card-desc-size);
+  line-height: var(--card-desc-lh);
+  color: rgba(234,240,242,.75);
+  margin: 0;
 }
 
-/* Responsive */
-
-@media (max-width: 992px) {
-  .grid {
+/* Responsive grid */
+@media (max-width: 992px){
+  .grid{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 620px) {
-  .grid {
+@media (max-width: 620px){
+  .grid{
     grid-template-columns: 1fr;
   }
-
-  .title {
-    font-size: 30px;
-  }
-  .section {
-
-  padding: 30px 30;
-
-}
-
 }

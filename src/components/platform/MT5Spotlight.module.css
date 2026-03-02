@@ -1,27 +1,46 @@
-/* components/platform/MT5Spotlight/MT5Spotlight.module.css */
+/* components/platform/MT5Spotlight/MT5Spotlight.module.css
+   UPDATED to Stonefort Master Style Spec
+   - DO NOT touch :root
+   - Card title = 16px
+   - Card desc  = 16px
+   - Button font = 16px
+*/
 
 .section{
   position: relative;
-  padding: 110px 0;
-  background: #101711;
+  padding:56px 16px;
+  background: var(--background);
   overflow: hidden;
 }
 
-/* Different vibe: diagonal light sweep + fog */
+@media (max-width: 600px){
+  .section{
+    padding: 40px 16px;
+  }
+}
+
+
 .section::before{
   content:"";
   position:absolute;
-  inset:-200px;
-  background:
-    radial-gradient(900px 520px at 20% 25%, rgba(77,110,85,.26), transparent 65%),
-    radial-gradient(900px 520px at 85% 70%, rgba(135,171,147,.14), transparent 65%),
-    linear-gradient(115deg, rgba(255,255,255,.06), transparent 35%, transparent 70%, rgba(255,255,255,.04));
-  filter: blur(22px);
+  inset:0;
   pointer-events:none;
+
+  background:
+    radial-gradient(
+      900px 520px at 20% 55%,     /* LEFT + CENTER */
+      rgba(135,171,147,.22),
+      transparent 65%
+    ),
+    radial-gradient(
+      700px 400px at 55% 60%,     /* CENTER soft glow */
+      rgba(77,110,85,.18),
+      transparent 70%
+    );
 }
 
 .inner{
-  width: min(1200px, calc(100% - 32px));
+  width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
@@ -75,23 +94,24 @@
   font-size: 12px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(135,171,147,.95);
+  color: var(--sfs-mint);
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .title{
   margin: 0 0 12px;
-  font-size: 36px;
+  font-size: var(--section-title-size);
   line-height: 1.12;
-  color: #fff;
-  font-weight: 780;
+  color: var(--foreground);
+  font-weight: 900;
 }
 
 .desc{
   margin: 0 0 26px;
-  color: #88918B;
-  font-size: 14.5px;
-  line-height: 1.75;
+  font-size: var(--section-sub-size);
+  line-height: 1.7;
+  color: rgba(234,240,242,.78);
   max-width: 520px;
 }
 
@@ -119,6 +139,7 @@
   opacity: .9;
 }
 
+/* Row behaves like Master card */
 .row{
   display: grid;
   grid-template-columns: 60px 1fr;
@@ -126,18 +147,28 @@
   align-items: start;
   padding: 14px 14px 14px 6px;
   border-radius: 16px;
+
   background: rgba(255,255,255,.02);
   border: 1px solid rgba(135,171,147,.12);
+  box-shadow: 0 18px 60px rgba(0,0,0,.30);
   backdrop-filter: blur(10px);
-  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
 .row:hover{
   transform: translateY(-4px);
-  border-color: rgba(77,110,85,.55);
-  box-shadow: 0 18px 50px rgba(77,110,85,.18);
+  border-color: var(--sfs-green-main);
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.22),
+    0 0 0 1px rgba(77,110,85,.18);
 }
 
+/* Number badge */
 .num{
   width: 46px;
   height: 46px;
@@ -145,25 +176,29 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  font-weight: 850;
+  font-weight: 900;
+  font-size: 16px;
   color: #ffffff;
   background: linear-gradient(180deg, rgba(77,110,85,.35), rgba(16,23,17,.15));
   border: 1px solid rgba(135,171,147,.22);
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
+/* ✅ RULE: Card title always 16px */
 .text h3{
   margin: 2px 0 6px;
   font-size: 16px;
-  color: #fff;
-  font-weight: 720;
+  line-height: 1.25;
+  color: var(--foreground);
+  font-weight: 900;
 }
 
+/* ✅ RULE: Card desc always 16px */
 .text p{
   margin: 0;
-  color: rgba(255,255,255,.82);
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.65;
+  color: rgba(234,240,242,.75);
 }
 
 /* CTA */
@@ -171,25 +206,42 @@
   margin-top: 22px;
 }
 
+/* ✅ RULE: Button font always 16px
+   Kept Master Primary button vibe (white -> glass hover)
+*/
 .cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 13px 18px;
-  border-radius: 999px;
+  gap:10px;
+
+  min-height:46px;
+  padding: 0 22px;
+  border-radius: 14px;
+
   text-decoration:none;
-  font-size: 14px;
-  font-weight: 650;
-  color: #fff;
-  background: #4D6E55;
-  border: 1px solid rgba(135,171,147,.25);
-  box-shadow: 0 18px 50px rgba(77,110,85,.22);
-  transition: transform .3s ease, background .3s ease;
+  font-size: 16px;
+  font-weight: 600;
+
+  background:#fff;
+  color:#101711;
+  border:1px solid rgba(135,171,147,.30);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
 }
 
 .cta:hover{
   transform: translateY(-2px);
-  background: #55816E;
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
+  color:#fff;
+  box-shadow:0 18px 55px rgba(77,110,85,.35);
 }
 
 /* RESPONSIVE */
@@ -198,11 +250,9 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .title{ font-size: 30px; }
 }
 
 @media (max-width: 520px){
-  .section{ padding: 50px 0 30px; }
   .row{ grid-template-columns: 52px 1fr; }
   .num{ width: 42px; height: 42px; }
 }

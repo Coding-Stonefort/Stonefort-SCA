@@ -1,7 +1,7 @@
 .section{
   background: var(--sfs-black);
   position: relative;
-  padding: 80px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
@@ -46,7 +46,7 @@
 
 .subtext{
   margin:0;
-  color: rgba(136,145,139,.92);
+  /* color: rgba(136,145,139,.92); */
   max-width: 72ch;
   font-size: 15px;
   line-height: 1.7;
@@ -194,7 +194,7 @@
 }
 
 .priceLabel{
-  color: rgba(136,145,139,.9);
+  /* color: rgba(136,145,139,.9); */
   font-size: 13px;
 }
 
@@ -226,13 +226,13 @@
 }
 
 .specLabel{
-  color: rgba(136,145,139,.92);
-  font-size: 13px;
+  color: rgba(234, 240, 242, .72);
+  font-size: 16px;
 }
 
 .specValue{
   color: rgba(255,255,255,.92);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -254,15 +254,17 @@
   border: 1px solid rgba(135,171,147,.38);
   background: rgba(77,110,85,.22);
   color: #fff;
-  font-weight: 650;
+  font-weight: 600;
+  font-size: 16px;
   text-decoration:none;
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
 
 .btnPrimary:hover{
   transform: translateY(-1px);
-  background: rgba(77,110,85,.30);
+  background: #fff;
   border-color: rgba(135,171,147,.55);
+  color: #101711;
 }
 
 .btnGhost{
@@ -273,9 +275,10 @@
   height: 42px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,.12);
-  background: rgba(16,23,17,.35);
-  color: rgba(255,255,255,.88);
-  font-weight: 600;
+  background: #fff;
+  color: #101711;
+    font-weight: 600;
+  font-size: 16px;
   text-decoration:none;
   transition: transform .18s ease, border-color .18s ease, background .18s ease;
 }
@@ -284,6 +287,7 @@
   transform: translateY(-1px);
   border-color: rgba(255,255,255,.20);
   background: rgba(16,23,17,.50);
+  color: #fff;
 }
 
 .note{

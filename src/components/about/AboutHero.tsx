@@ -20,8 +20,8 @@ export default function AboutHero() {
       {/* LEFT CONTENT stays inside max width */}
       <div className={styles.container}>
         <div className={styles.left}>
-          <p className={styles.kicker}>About</p>
-          <h1 className={styles.title}>Stonefort</h1>
+          {/* <p className={styles.kicker}>About</p> */}
+          <h1 className={styles.title}>About Stonefort</h1>
 
           <p className={styles.lead}>
             Stonefort Securities connects traders in the UAE and globally to the world’s leading

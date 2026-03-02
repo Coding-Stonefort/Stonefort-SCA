@@ -7,16 +7,20 @@ export default function CFDMarketsPro() {
       <div className={styles.inner}>
         <div className={styles.head}>
           <h2 className={styles.title}>Our CFD Markets</h2>
-          {/* <p className={styles.desc}>
-            Access live quotes across indices and commodities. Market data is indicative and provided for informational purposes only.
-          </p> */}
+          <p className={styles.desc}>
+            Explore live indicative quotes across indices and commodities through internationally recognised trading platforms.
+          </p>
         </div>
 
         <MarketBoard />
 
-        {/* <a className={styles.browse} href="/market">
+        <a className={styles.browse} href="/Market">
           Browse all markets →
-        </a> */}
+        </a>
+
+        <p className={styles.disclaimer}>
+  Disclaimer: All market data is provided for informational purposes only and does not constitute an offer or solicitation of trading services.
+</p>
       </div>
     </section>
   );

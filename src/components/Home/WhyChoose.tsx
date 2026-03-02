@@ -82,9 +82,7 @@ export default function WhyChoose() {
           <Link href="/live-account" className={styles.ctaBtn}>
             Open an Account
           </Link>
-          <p className={styles.ctaNote}>
-            Trading involves risk. Ensure you understand the products and risks before trading.
-          </p>
+        
         </div>
       </div>
     </section>
