@@ -82,7 +82,7 @@
 }
 
 .grid{
-  margin-top: 26px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 14px;
@@ -117,22 +117,7 @@
     0 0 0 1px rgba(77,110,85,.25);
 }
 
-/* Soft internal glow (same for every card) */
-/* .card::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius: 20px;
-  background:
-    radial-gradient(520px 180px at 15% 10%,
-      rgba(135,171,147,.16),
-      transparent 60%),
-    radial-gradient(520px 180px at 90% 10%,
-      rgba(77,110,85,.14),
-      transparent 62%);
-  pointer-events:none;
-  opacity:.9;
-} */
+
 
 /* Optional: slightly intensify glow on hover (premium feel) */
 .card:hover::before{
@@ -291,6 +276,9 @@
     .section {
       padding: 30px 16px;
     }  
+    .title {
+      font-size: 32px;
+    }
 }
 
 /* Reduced motion */

@@ -14,7 +14,7 @@
   margin: 0 0 10px;
   color: rgba(255,255,255,.92);
   font-weight: 500;
-  font-size: 44px;
+  font-size: 54px;
   line-height: 1.05;
   letter-spacing: .02em;
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
@@ -81,7 +81,7 @@
 /* Responsive */
 @media (max-width: 768px){
   .heading{
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .card{

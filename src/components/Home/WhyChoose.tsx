@@ -56,7 +56,7 @@ export default function WhyChoose() {
       <div className={styles.container}>
         <div className={styles.head}>
           {/* <p className={styles.kicker}>Next Section</p> */}
-          <h2 className={styles.title}>Why Choose Stonefort?</h2>
+          <h2 className={styles.title}>Why Choose <span>Stonefort?</span></h2>
           <p className={styles.sub}>
             Experience a regulated trading environment with transparent pricing, robust controls, and dedicated support.
           </p>

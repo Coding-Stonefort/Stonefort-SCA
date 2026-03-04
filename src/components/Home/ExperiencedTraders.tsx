@@ -49,7 +49,7 @@ export default function ExperiencedTraders() {
       <div className={styles.container}>
         <div className={styles.head}>
           
-          <h2 className={styles.title}>For Experienced Traders</h2>
+          <h2 className={styles.title}>For Experienced <span>Traders</span></h2>
           <p className={styles.sub}>
             A range of tools and controls designed to support analysis, monitoring, and informed decision-making.
           </p>

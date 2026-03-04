@@ -6,7 +6,7 @@ export default function CFDMarketsPro() {
     <section className={styles.section} aria-label="Our CFD markets">
       <div className={styles.inner}>
         <div className={styles.head}>
-          <h2 className={styles.title}>Our CFD Markets</h2>
+          <h2 className={styles.title}>Our CFD <span>Markets</span></h2>
           <p className={styles.desc}>
             Explore live indicative quotes across indices and commodities through internationally recognised trading platforms.
           </p>

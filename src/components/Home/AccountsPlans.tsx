@@ -52,7 +52,7 @@ export default function AccountsPlans() {
       <div className={styles.container}>
         <div className={styles.head}>
           <p className={styles.kicker}>Accounts</p>
-          <h2 className={styles.title}>Find Your Perfect Trading Account</h2>
+          <h2 className={styles.title}>Find Your Perfect <span>Trading Account</span></h2>
           <p className={styles.subtext}>
             Find the Stonefort account that fits your trading style, offering flexibility, transparency, and performance.
           </p>

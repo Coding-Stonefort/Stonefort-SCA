@@ -7,7 +7,7 @@ export default function RiskFreeDemoCta() {
         <div className={styles.banner}>
           <div className={styles.left}>
             <p className={styles.kicker}>Not ready to trade for real?</p>
-            <h2 className={styles.title}>Try Our Platforms Risk-Free</h2>
+            <h2 className={styles.title}>Try <span>Our Platforms</span> Risk-Free</h2>
             <p className={styles.text}>
               Open a demo account to explore <strong>Stonefortrader</strong> and <strong>MT5</strong>{" "}
               with virtual funds - no real money required.

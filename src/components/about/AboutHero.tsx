@@ -5,22 +5,20 @@ import styles from "./AboutHero.module.css";
 export default function AboutHero() {
   return (
     <section className={styles.hero} aria-label="About Stonefort">
-      {/* FULL WIDTH IMAGE pinned to top-right */}
       <div className={styles.heroImage} aria-hidden="true">
         <Image
           src="/images/about/abouttopbanner.webp"
           alt=""
-          width={600}  
-          height={500}  
+          width={600}
+          height={500}
           priority
+          sizes="(max-width: 520px) 100vw, (max-width: 980px) 55vw, 560px"
           className={styles.image}
         />
       </div>
 
-      {/* LEFT CONTENT stays inside max width */}
       <div className={styles.container}>
         <div className={styles.left}>
-          {/* <p className={styles.kicker}>About</p> */}
           <h1 className={styles.title}>About Stonefort</h1>
 
           <p className={styles.lead}>

@@ -60,23 +60,25 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
-
+.title span{
+  color: var(--sfs-mint);
+}
 .subtext{
   margin: 0 auto;
   max-width: 78ch;
 
   line-height: 1.65;
-  font-size: 15.5px;
+  font-size: 16px;
 }
 
 /* two horizontal options */
 .row{
-  margin-top: 22px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 14px;
 
-  align-items: stretch; /* ✅ makes both cards same height */
+  align-items: stretch; 
 }
 
 /* Card (clean - no inner glow, no section glow) */
@@ -90,7 +92,7 @@
   position: relative;
   overflow: hidden;
 
-  /* ✅ key */
+
   display: flex;
   flex-direction: column;
   min-height: 100%;

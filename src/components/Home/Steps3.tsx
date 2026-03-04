@@ -38,9 +38,9 @@ export default function Steps3() {
       <div className={styles.container}>
         <div className={styles.head}>
           <p className={styles.kicker}>Onboarding</p>
-          <h2 className={styles.title}>Get Started in 3 Simple Steps</h2>
+          <h2 className={styles.title}>Get Started in <span>3 Simple Steps</span></h2>
           <p className={styles.subtext}>
-            Open an account, fund it, and start trading — all in a few minutes.
+            Open an account, fund it, and start trading - all in a few minutes.
           </p>
         </div>
 

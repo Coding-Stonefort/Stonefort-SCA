@@ -46,12 +46,14 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
-
+.title span{
+  color: var(--sfs-mint);
+}
 .subtext{
   margin:0;
   /* color: rgba(136,145,139,.92); */
   max-width: 72ch;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -59,7 +61,7 @@
   display:grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 18px;
+  margin-top: 30px;
 }
 
 .card{
@@ -311,4 +313,7 @@
     .section {
       padding: 30px 16px;
     }  
+    .title {
+      font-size: 32px;
+    }
 }

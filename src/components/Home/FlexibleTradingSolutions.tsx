@@ -41,7 +41,7 @@ export default function FlexibleTradingSolutions() {
       <div className={styles.inner}>
         <header className={styles.header}>
 
-          <h2 className={styles.title}>Flexible Trading Solutions</h2>
+          <h2 className={styles.title}>Flexible <span>Trading Solutions</span></h2>
           <p className={styles.subtext}>
             Stonefort offers clients access to multiple trading platforms, including MT5 and StoneforTrader, to suit different trading styles and preferences. 
           </p>
