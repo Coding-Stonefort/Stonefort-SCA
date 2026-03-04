@@ -6,27 +6,27 @@ const markets = [
   {
     title: "Forex",
     desc: "Trade major, minor and exotic currency pairs in the global FX market.",
-    icon: "/images/market/fxmarket.webp",
+    icon: "/images/market/forex-2.webp",
   },
   {
     title: "Indices",
     desc: "Access leading global indices reflecting major economies and sectors.",
-    icon: "/images/market/indicesmarket.webp",
+    icon: "/images/market/market-indices.webp",
   },
   {
     title: "Commodities",
     desc: "Trade energy, metals and agricultural products with competitive execution.",
-    icon: "/images/market/commoditiesmarket.webp",
+    icon: "/images/market/marketcommodities.webp",
   },
   {
     title: "Shares",
     desc: "Gain exposure to internationally listed companies across key markets.",
-    icon: "/images/market/Sharesmarket.webp",
+    icon: "/images/market/Shares-CFDs.webp",
   },
   {
     title: "Precious Metals",
     desc: "Trade gold and silver in a secure and regulated trading environment.",
-    icon: "/images/market/metalsmarket.webp",
+    icon: "/images/market/Metalsilver.webp",
   },
   {
     title: "Energy",

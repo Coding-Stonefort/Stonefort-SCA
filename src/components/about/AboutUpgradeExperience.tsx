@@ -7,7 +7,7 @@ const items = [
     title: "MetaTrader Platforms",
     desc:
       "Access the latest versions of the industry-leading MetaTrader 4 and MetaTrader 5 built for speed, precision and global trust",
-    icon: "/images/about/MetatradingPlatform.webp"
+    icon: "/images/about/platfroms.webp"
   },
   {
     title: "Dedicated Client Portal",
@@ -19,7 +19,7 @@ const items = [
     title: "Stonefort Payment Solution",
     desc:
       "Trade, withdraw and spend seamlessly with a globally accepted payment solution available online and offline in over 200 countries",
-    icon: "/images/about/StonefortPayment.webp",
+    icon: "/images/about/StonefortPaymentabout.webp",
   },
 ];
 

@@ -37,7 +37,7 @@ export default function AboutIntegritySection() {
 
           <div className={styles.mockupWrap}>
             <Image
-              src="/images/about/Integrityimg.webp"
+              src="/images/about/Driving-by-integrity-file.webp"
               alt=""
               width={760}
               height={520}

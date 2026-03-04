@@ -12,7 +12,7 @@ export default function AboutMissionVision() {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-              src="/images/about/OurMission.webp"
+              src="/images/about/OurMissionabout.webp"
               alt="Stonefort Mission"
               width={120}
               height={120}
@@ -33,7 +33,7 @@ export default function AboutMissionVision() {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-              src="/images/about/OurVision.webp"
+              src="/images/about/aboutOurVision.webp"
               alt="Stonefort Vission"
               width={120}
               height={120}

@@ -16,7 +16,7 @@ const items: Item[] = [
     title: "Stay connected in real time",
     desc: "Stay connected with the latest financial news, official updates and market insights in real time.",
     href: "/",
-    img: "/images/about/socialmeidaimg.webp",
+    img: "/images/about/Phone-on-a-desk-new.webp",
   },
   {
     kicker: "Account Types",
@@ -30,7 +30,7 @@ const items: Item[] = [
     title: "Campaigns that give you an edge",
     desc: "Explore exclusive offers and trading campaigns crafted to give you a competitive edge in the market.",
     href: "/promotions",
-    img: "/images/about/campaignimg.webp",
+    img: "/images/about/Social-Media-Laptop.webp",
   },
 ];
 
