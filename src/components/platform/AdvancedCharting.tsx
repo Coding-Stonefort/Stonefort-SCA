@@ -31,7 +31,7 @@ export default function AdvancedCharting() {
       <div className={styles.inner}>
         <div className={styles.head}>
           <h2 className={styles.title}>
-            Advanced Charting and Trade Execution
+            Advanced Charting and <span>Trade Execution</span>
           </h2>
           {/* <p className={styles.desc}>
             Trade smarter with chart-first execution, powerful analysis tools,

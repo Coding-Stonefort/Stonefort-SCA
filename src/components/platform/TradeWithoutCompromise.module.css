@@ -39,7 +39,9 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
-
+.title span{
+  color: var(--sfs-mint);
+}
 .sub{
   margin: 0 0 20px;
   font-size: var(--section-sub-size);
@@ -172,4 +174,8 @@
   .title{
     font-size: 32px;
   }
+  .top{
+
+  margin-bottom: 20px;
+}
 }

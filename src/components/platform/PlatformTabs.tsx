@@ -59,7 +59,7 @@ export default function PlatformTabs() {
       <div className={styles.container}>
         {/* LEFT: tabs + content */}
         <div className={styles.left}>
-          <h2 className={styles.h2}>Your Platform. Your Trading Style.</h2>
+          <h2 className={styles.h2}>Your <span>Platform</span>. Your <span>Trading </span>Style.</h2>
           <p className={styles.p}>
             Trade with confidence on Stonefort’s advanced platforms, from web and mobile access to the globally trusted MetaTrader suite. Built for speed, flexibility, and control, wherever you trade. 
           </p>

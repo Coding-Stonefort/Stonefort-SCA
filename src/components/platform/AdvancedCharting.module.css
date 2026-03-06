@@ -51,7 +51,9 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
-
+.title span{
+  color: var(--sfs-mint);
+}
 /*  Section Description (Master Spec) */
 .desc {
   font-size: var(--section-sub-size);
@@ -213,4 +215,15 @@
   .title{ 
     font-size: 32px;
   }
+  .ctaBlock h3 {
+    font-size: 32px;
+  }
+    .grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .head {
+ 
+  margin-bottom: 20px;
+}
 }

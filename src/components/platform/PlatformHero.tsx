@@ -9,7 +9,7 @@ export default function PlatformHero() {
         <div className={styles.left}>
           <div className={styles.kicker}>Platform</div>
 
-          <h1 className={styles.title}>Explore Our Trading Platforms </h1>
+          <h1 className={styles.title}>Explore Our <span>Trading Platforms</span> </h1>
 
           <p className={styles.desc}>
             Choose from our intuitive WebTrader, mobile app, MetaTrader 5, and AutoChartist. Powerful tools, real-time pricing, and seamless execution designed to support your trading journey.

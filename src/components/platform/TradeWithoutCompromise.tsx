@@ -35,7 +35,7 @@ export default function TradeWithoutCompromise() {
 
         {/* Top Heading */}
         <div className={styles.top}>
-          <h2 className={styles.title}>Trade Without Compromise</h2>
+          <h2 className={styles.title}>Trade <span>Without Compromise</span></h2>
           <p className={styles.sub}>
             Powerful Platforms. Complete Control. 
           </p>

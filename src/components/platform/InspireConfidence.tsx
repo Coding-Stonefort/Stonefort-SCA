@@ -88,7 +88,7 @@ export default function InspireConfidence() {
           </h2>
         </header>
 
-        {/* ✅ ONE GRID so all 6 cards align perfectly */}
+        {/*  ONE GRID so all 6 cards align perfectly */}
         <div className={styles.grid}>
           {ALL.map((c) => (
             <Card key={c.title} title={c.title} desc={c.desc} img={c.img} alt={c.alt} />

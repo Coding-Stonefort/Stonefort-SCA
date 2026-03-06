@@ -45,7 +45,7 @@ export default function MT5Spotlight() {
         {/* RIGHT CONTENT */}
         <div className={styles.content}>
           <div className={styles.kicker}>MetaTrader 5</div>
-          <h2 className={styles.title}>Advanced Trading with MetaTrader 5</h2>
+          <h2 className={styles.title}>Advanced Trading with <span>MetaTrader 5</span></h2>
           <p className={styles.desc}>
             Advanced tools, integrated insights, and exclusive EAs and indicators
             designed to elevate your trading experience.

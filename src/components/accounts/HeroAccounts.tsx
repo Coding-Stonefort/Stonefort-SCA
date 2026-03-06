@@ -78,12 +78,12 @@ Narrow Spread</strong>
   <div className={styles.metaItem}>
     <Image
       src="/images/accounts/metalogo.webp"
-      alt="SCA Regulated"
+      alt="CMA Regulated"
       width={60}
       height={60}
       className={styles.metaIcon}
     />
-    <strong>SCA</strong>
+    <strong>CMA</strong>
     <span>Regulated</span>
   </div>
 
