@@ -6,19 +6,19 @@ const TOP = [
   {
     title: "Fast & Reliable Execution",
     desc: "Trade on a stable, automated infrastructure designed for speed and consistent performance across global markets.",
-    img: "/images/platform/InstantExecution.webp",
+    img: "/images/platform/iinstant-execution.webp",
     alt: "Instant execution icon",
   },
   {
     title: "Transparent Pricing",
     desc: "View bid and ask prices clearly before placing trades, helping you understand market conditions and trading costs.",
-    img: "/images/platform/FullTransparency.webp",
+    img: "/images/platform/Transparent.webp",
     alt: "Transparent pricing icon",
   },
   {
     title: "Advanced Charting & Analysis",
     desc: "Analyse price movements with a range of technical indicators, drawing tools, and timeframes available across our platforms.",
-    img: "/images/platform/platfroms.webp",
+    img: "/images/platform/Advanced-Charting.webp",
     alt: "Advanced charting icon",
   },
 ];
@@ -27,19 +27,19 @@ const BOTTOM = [
   {
     title: "Market Insights & Trading Signals",
     desc: "Use integrated analytical tools and pattern recognition to identify trends and support informed decisions.",
-    img: "/images/platform/collaboration.webp",
+    img: "/images/platform/Market-insight.webp",
     alt: "Market insights icon",
   },
   {
     title: "Trusted Market News & Updates",
     desc: "Stay up to date with real-time market information and professional insights directly within your trading environment.",
-    img: "/images/platform/envelope.webp",
+    img: "/images/platform/Market-trusted 2.webp",
     alt: "Market news icon",
   },
   {
     title: "Trade Anytime, Anywhere",
     desc: "Access global markets with the Stonefort Trader mobile app - manage and monitor trades wherever you are.",
-    img: "/images/platform/TradeAnywhere.webp",
+    img: "/images/platform/Trade-anywhere.webp",
     alt: "Trade anywhere icon",
   },
 ];

@@ -21,19 +21,19 @@ const channels: Channel[] = [
   {
     title: "Media Collaboration",
     value: "marketing@stonefortsecurities.com",
-    icon: "/images/contact/collaboration.webp",
+    icon: "/images/contact/Media-Collaboration.webp",
     type: "email",
   },
   {
     title: "Support",
     value: "support@stonefort.ae",
-    icon: "/images/contact/support.webp",
+    icon: "/images/contact/Customer-support-contactus.webp",
     type: "email",
   },
   {
     title: "Contact",
     value: "+971-4-564 6888",
-    icon: "/images/contact/contact.webp", 
+    icon: "/images/contact/contactus.webp", 
     type: "phone",
   },
 ];

@@ -7,19 +7,19 @@ const items = [
     title: "MetaTrader Platforms",
     desc:
       "Access the latest versions of the industry-leading MetaTrader 4 and MetaTrader 5 built for speed, precision and global trust",
-    icon: "/images/about/platfroms.webp"
+    icon: "/images/about/mt4mt5platform.webp"
   },
   {
     title: "Dedicated Client Portal",
     desc:
       "Track, manage and control your trading account with ease from one secure and intuitive dashboard",
-    icon: "/images/about/ClientPortal.webp",
+    icon: "/images/about/clientportalaboutus.webp",
   },
   {
     title: "Stonefort Payment Solution",
     desc:
       "Trade, withdraw and spend seamlessly with a globally accepted payment solution available online and offline in over 200 countries",
-    icon: "/images/about/StonefortPaymentabout.webp",
+    icon: "/images/about/StonefortPaymentaboutus.webp",
   },
 ];
 

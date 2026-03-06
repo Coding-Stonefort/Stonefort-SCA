@@ -31,7 +31,7 @@ const markets = [
   {
     title: "Energy",
     desc: "Participate in global energy markets including crude oil benchmarks.",
-    icon: "/images/market/InstantExecution.webp",
+    icon: "/images/about/Fast-excecution.webp",
   },
 ];
 

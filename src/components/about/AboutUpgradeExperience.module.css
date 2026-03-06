@@ -74,9 +74,9 @@
 }
 
 /* Icon Block (Stonefort System — NOT circular bubble) */
-.icon{
-  width: 80px;
-  height: 80px;
+/* .icon{
+  width: 120px;
+  height: 120px;
   margin: 0 auto 18px;
 
   display:grid;
@@ -86,13 +86,13 @@
   background: rgba(255,255,255,.04);
   border:1px solid rgba(255,255,255,.10);
   box-shadow: 0 14px 30px rgba(0,0,0,.35);
-}
+} */
 
 /* If using image inside */
 .icon img,
 .icon :global(img){
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   filter: drop-shadow(0 14px 30px rgba(0,0,0,.35));
 }

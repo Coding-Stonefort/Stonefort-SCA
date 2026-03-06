@@ -13,32 +13,32 @@ const FEATURES: Feature[] = [
   {
     title: "Trade with Precision",
     desc: "Start with a minimum trade size of just 0.01 lot, giving you full control over your trading exposure.",
-    icon: "/images/accounts/TradewithPrecision.webp",
+    icon: "/images/accounts/Trade-with-presition.webp",
   },
   {
     title: "Access Global Markets",
     desc: "Trade 1500+ instruments including Forex, commodities, indices, and more – all from a single account.",
-    icon: "/images/accounts/AccessGlobalMarkets.webp",
+    icon: "/images/accounts/Access-global-market-icon.webp",
   },
   {
     title: "Instant Execution",
     desc: "Experience seamless order execution with minimal slippage, aligned with real market conditions.",
-    icon: "/images/accounts/InstantExecution.webp",
+    icon: "/images/accounts/iinstant-execution.webp",
   },
   {
     title: "Full Transparency",
     desc: "Enjoy clear pricing, competitive spreads, and no hidden commissions across all accounts.",
-    icon: "/images/accounts/FullTransparency.webp",
+    icon: "/images/accounts/Full-Transparency.webp",
   },
   {
     title: "Trade Anywhere",
     desc: "Stay ahead with desktop, web, and mobile platforms, letting you act on market opportunities instantly.",
-    icon: "/images/accounts/TradeAnywhere.webp",
+    icon: "/images/accounts/Trade-anywhere.webp",
   },
   {
     title: "Dedicated Support",
     desc: "Our Stonefort support team is available 24/7, ensuring assistance whenever you need it.",
-    icon: "/images/accounts/DedicatedSupport.webp",
+    icon: "/images/accounts/Customer-support.webp",
   },
 ];
 

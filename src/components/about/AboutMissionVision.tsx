@@ -12,7 +12,7 @@ export default function AboutMissionVision() {
           <div className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image
-              src="/images/about/OurMissionabout.webp"
+              src="/images/about/Trade-with-presition.webp"
               alt="Stonefort Mission"
               width={120}
               height={120}
