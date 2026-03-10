@@ -1,48 +1,98 @@
+import Image from "next/image";
 import styles from "./AboutWhyChoose.module.css";
 
 export default function AboutWhyChoose() {
   return (
     <section className={styles.section} aria-label="Why Choose Stonefort">
       <div className={styles.container}>
-        <h2 className={styles.title}>Why <span>Choose Stonefort</span>?</h2>
+        <h2 className={styles.title}>Why Choose <span>Stonefort MENA</span>?</h2>
 
         <p className={styles.lead}>
-            Traders choose Stonefort for our commitment to regulatory integrity, transparency and consistent service excellence. We provide access to global financial markets through advanced platforms, strong liquidity and reliable execution.
+          Stonefort MENA gives traders in the region secure access to Stonefort’s fully regulated services.
+          Trade confidently on cutting-edge platforms with professional account support, expert guidance,
+          and clear, transparent processes. We combine education, technology, and client-focused assistance
+          to help you make smarter trading decisions every step of the way.
         </p>
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>Strong Regulatory Framework</h3>
-            <p>
-              Operating within a robust regulatory environment focused on security and client protection.
-            </p>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/homeregulated.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconRegulated}`}
+              />
+            </div>
+            <h3>Regulated & Trusted</h3>
           </div>
 
           <div className={styles.card}>
-            <h3>Global Market Access</h3>
-            <p>
-              Trade multiple asset classes including Forex, indices, commodities and shares.
-            </p>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/market-indices.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconMarket}`}
+              />
+            </div>
+            <h3>Reliable Market Access</h3>
           </div>
 
           <div className={styles.card}>
-            <h3>Secure and Efficient Transactions</h3>
-            <p>
-              Reliable funding options designed for fast and transparent deposits and withdrawals.
-            </p>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/UAE-Based-Expertise.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconUae}`}
+              />
+            </div>
+            <h3>UAE-Based Expertise</h3>
           </div>
 
           <div className={styles.card}>
-            <h3>Dedicated 24/5 Support</h3>
-            <p>
-              Professional assistance focused on clear guidance and long term client relationships.
-            </p>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/Full-Transparency.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconTransparency}`}
+              />
+            </div>
+            <h3>Transparent Processes</h3>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/image (3)-Photoroom.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconSupport}`}
+              />
+            </div>
+            <h3>Expert Support & Education</h3>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.iconBox}>
+              <Image
+                src="/images/about/Transparent.webp"
+                alt=""
+                width={140}
+                height={140}
+                className={`${styles.iconImg} ${styles.iconCommitment}`}
+              />
+            </div>
+            <h3>Client-First Commitment</h3>
           </div>
         </div>
-
-        <p className={styles.footerText}>
-          At Stonefort, we deliver a compliant, stable and performance driven trading environment built for today’s traders. 
-        </p>
       </div>
     </section>
   );

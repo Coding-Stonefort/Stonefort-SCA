@@ -42,7 +42,7 @@ export default function AboutExploreMarkets() {
       aria-label="Explore Opportunities in Global Markets"
     >
       <div className={styles.container}>
-        <h2 className={styles.title}>Explore Opportunities in <span>Global Markets</span></h2>
+        {/* <h2 className={styles.title}>Explore Opportunities in <span>Global Markets</span></h2>
 
         <p className={styles.lead}>
           As a regulated introducing broker under the Stonefort group, we provide
@@ -50,7 +50,7 @@ export default function AboutExploreMarkets() {
           and reliable trading environment. Discover diverse markets and seize
           opportunities with confidence, backed by technology, transparency and
           professional support.
-        </p>
+        </p> */}
 
         <div className={styles.grid}>
           {markets.map((item) => (

@@ -6,14 +6,24 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
+
 const nav = [
-  { href: "/", label: "Home" },
-  { href: "/Market", label: "Market" },
-  { href: "/accounts", label: "Accounts" },
-  { href: "/platform", label: "Platform" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact Us" },
-];
+        { href: "/stonefortmena", label: "Stonefort MENA" },
+  {
+    label: "Trading",
+    children: [
+      { href: "/", label: "Product" },
+      { href: "/Market", label: "Market" },
+      { href: "/accounts", label: "Account" },
+    ],
+  },
+
+      { href: "/platform", label: "Platform" },
+      { href: "/contact", label: "Contact Us" },
+]
+
+
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -182,12 +192,33 @@ export default function Header() {
 
             {/* Desktop nav */}
             <nav className={styles.nav} aria-label="Primary navigation">
-              {nav.map((item) => (
-                <Link key={item.href} href={item.href} className={styles.link}>
-                  {item.label}
-                </Link>
-              ))}
+              {nav.map((item) =>
+                item.children ? (
+                  <div key={item.label} className={styles.dropdown}>
+                    <button type="button" className={styles.linkBtn}>
+                      {item.label}
+                      <span className={styles.caret}></span>
+                    </button>
+
+                    <div className={styles.dropdownMenu}>
+                      {item.children.map((child) => (
+                        <Link key={child.href} href={child.href} className={styles.dropdownLink}>
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link key={item.href} href={item.href} className={styles.link}>
+                    {item.label}
+                  </Link>
+                )
+              )}
             </nav>
+
+
+
+
 
             {/* Right: actions */}
             <div className={styles.actions}>
@@ -212,14 +243,52 @@ export default function Header() {
                 ✕
               </button>
             </div>
-
+{/* 
             <nav id="primary-navigation" className={styles.drawerNav} aria-label="Primary navigation (mobile)">
               {nav.map((item) => (
                 <Link key={item.href} href={item.href} className={styles.drawerLink} onClick={closeMenu}>
                   {item.label}
                 </Link>
               ))}
-            </nav>
+            </nav> */}
+
+            <nav
+  id="primary-navigation"
+  className={styles.drawerNav}
+  aria-label="Primary navigation (mobile)"
+>
+  {nav.map((item) =>
+    item.children ? (
+      <div key={item.label} className={styles.drawerGroup}>
+        <div className={styles.drawerParent}>{item.label}</div>
+
+        <div className={styles.drawerSubmenu}>
+          {item.children.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              className={styles.drawerSublink}
+              onClick={closeMenu}
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <Link
+        key={item.href}
+        href={item.href}
+        className={styles.drawerLink}
+        onClick={closeMenu}
+      >
+        {item.label}
+      </Link>
+    )
+  )}
+</nav>
+
+    
 
             <div className={styles.drawerActions}>
               <Link href="/login" className={styles.drawerLogin} onClick={closeMenu}>

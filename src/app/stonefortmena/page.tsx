@@ -5,10 +5,11 @@ import AboutWhyChoose from "@/components/about/AboutWhyChoose";
 import AboutIntegrity from "@/components/about/AboutIntegrity";
 import AboutMissionVision from "@/components/about/AboutMissionVision";
 import AboutExploreMarkets from "@/components/about/AboutExploreMarkets";
-import AboutUpgradeExperience from "@/components/about/AboutUpgradeExperience";
-import AboutExploreLinks from "@/components/about/AboutExploreLinks";
+
+
 import AboutMoneyProtected from "@/components/about/AboutMoneyProtected";
 import { GetStartedCTA } from "@/components/Home";
+import RelationshipSection from "@/components/about/RelationshipSection";
 
 export const metadata = {
   title: "About | Stonefort Securities",
@@ -24,8 +25,9 @@ export default function AboutPage() {
       <AboutIntegrity />
       <AboutMissionVision />
       <AboutExploreMarkets />
-      <AboutUpgradeExperience />
-      <AboutExploreLinks />
+      <RelationshipSection />
+   
+
       <AboutMoneyProtected />
       <GetStartedCTA />
     </>

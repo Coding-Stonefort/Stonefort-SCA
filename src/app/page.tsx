@@ -11,6 +11,8 @@ import { PaymentGatewaysSlider } from "@/components/Home";
 import { AccountsPlans } from "@/components/Home";
 import { Steps3 } from "@/components/Home";
 import { GetStartedCTA } from "@/components/Home";
+import AboutUpgradeExperience from "@/components/about/AboutUpgradeExperience";
+import AboutExploreLinks from "@/components/about/AboutExploreLinks";
 
 export default function HomePage() {
   return (
@@ -22,8 +24,11 @@ export default function HomePage() {
       <ExperiencedTraders />
       <CFDMarketsPro />
       <BeginnerTradersSection />
+
       <FlexibleTradingSolutions />
+      <AboutUpgradeExperience />
       <RiskFreeDemoCta />
+            <AboutExploreLinks />
       {/* <PaymentGatewaysSlider /> */}
       <AccountsPlans />
       <Steps3 />

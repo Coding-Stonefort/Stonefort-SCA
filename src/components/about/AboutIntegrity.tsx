@@ -8,18 +8,19 @@ export default function AboutIntegritySection() {
       <div className={styles.container}>
         <div className={styles.left}>
           <h2 className={styles.title}>
-            Driven by <span>Integrity</span> Guided by <span>Responsibility</span> Powered by <span>Innovation</span>
+            At<span> Stonefort</span>  MENA
           </h2>
 
           <p className={styles.lead}>
-            At Stonefort, everything we build is centered around delivering clarity, performance and
-            reliability. Our focus is not just access to markets, but creating a trading environment
-            that supports informed decisions and consistent progress.
+            We believe access to global financial markets should be simple, professional, transparent, and fully supported.
           </p>
 
           <p className={styles.text}>
-            We are committed to providing the structure, technology and support that help turn
-            opportunity into achievement.
+            As a CMA Category 5 regulated broker, we empower clients by connecting them to Stonefort’s regulated trading services and providing expert guidance at every step. 
+          </p>
+
+          <p className={styles.text}>
+            Our mission is to guide you through your trading journey with trusted market access, educational insights, clear communication, and responsive support you can rely on.  
           </p>
 
           <div className={styles.ctaRow}>
@@ -37,7 +38,7 @@ export default function AboutIntegritySection() {
 
           <div className={styles.mockupWrap}>
             <Image
-              src="/images/about/Driving-by-integrity-file.webp"
+              src="/images/about/CMA-based.webp"
               alt=""
               width={760}
               height={520}
