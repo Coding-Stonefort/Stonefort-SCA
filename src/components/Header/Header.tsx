@@ -6,24 +6,19 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
-
 const nav = [
-        { href: "/stonefortmena", label: "Stonefort MENA" },
+  { href: "/", label: "Stonefort MENA" },
   {
     label: "Trading",
     children: [
-      { href: "/", label: "Product" },
+      { href: "/product", label: "Product" },
       { href: "/Market", label: "Market" },
       { href: "/accounts", label: "Account" },
     ],
   },
-
-      { href: "/platform", label: "Platform" },
-      { href: "/contact", label: "Contact Us" },
-]
-
-
-
+  { href: "/platform", label: "Platform" },
+  { href: "/contact", label: "Contact Us" },
+];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -32,9 +27,7 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [shadow, setShadow] = useState(false);
 
-  // spacer height (because header is fixed)
   const headerRef = useRef<HTMLElement | null>(null);
-  const [headerH, setHeaderH] = useState(0);
 
   const pathname = usePathname();
   const lastYRef = useRef(0);
@@ -42,34 +35,24 @@ export default function Header() {
 
   const closeMenu = () => setOpen(false);
 
-  // Measure header height (auto updates)
-  useEffect(() => {
-    if (!headerRef.current) return;
+  const isActiveLink = (href?: string) => {
+    if (!href) return false;
+    return pathname === href;
+  };
 
-    const el = headerRef.current;
-
-    const update = () => {
-      const h = Math.ceil(el.getBoundingClientRect().height || 0);
-      setHeaderH(h);
-    };
-
-    update();
-
-    const ro = new ResizeObserver(() => update());
-    ro.observe(el);
-
-    window.addEventListener("resize", update);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", update);
-    };
-  }, []);
+  const isDropdownActive = (
+    children?: { href: string; label: string }[]
+  ) => {
+    if (!children) return false;
+    return children.some((child) => pathname === child.href);
+  };
 
   // Close menu on ESC
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
+
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
@@ -88,17 +71,14 @@ export default function Header() {
     };
   }, [open]);
 
-  // Get scroll position even if app uses different scroll roots
   const getScrollY = () => {
-    // window scroll
     const y1 = window.scrollY || 0;
-    // document scroll fallback
     const y2 = document.documentElement?.scrollTop || 0;
     const y3 = document.body?.scrollTop || 0;
     return Math.max(y1, y2, y3);
   };
 
-  // Hide on scroll down, show on scroll up (robust)
+  // Hide on scroll down, show on scroll up
   useEffect(() => {
     lastYRef.current = getScrollY();
 
@@ -129,15 +109,16 @@ export default function Header() {
       });
     };
 
-    // Listen on window + capture scroll events (works for many scroll containers)
     window.addEventListener("scroll", onScroll, { passive: true });
-    document.addEventListener("scroll", onScroll, { passive: true, capture: true });
+    document.addEventListener("scroll", onScroll, {
+      passive: true,
+      capture: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("scroll", onScroll, true);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -150,21 +131,19 @@ export default function Header() {
           shadow && !hidden ? styles.headerShadow : "",
         ].join(" ")}
       >
-        {/* 1) Risk warning bar */}
         <div className={styles.risk}>
           <div className={styles.container}>
             <p className={styles.riskText}>
-              <strong>Risk Warning:</strong> Trading Contracts for Difference (CFDs) on margin involves a
-              high level of risk and may not be suitable for all investors. You should ensure that you
-              fully understand the risks involved before trading.
+              <strong>Risk Warning:</strong> Trading Contracts for Difference
+              (CFDs) on margin involves a high level of risk and may not be
+              suitable for all investors. You should ensure that you fully
+              understand the risks involved before trading.
             </p>
           </div>
         </div>
 
-        {/* 2) Main header row */}
         <div className={styles.top}>
           <div className={styles.containerTop}>
-            {/* Left: brand logo */}
             <div className={styles.brand} aria-label="Stonefort Securities">
               <Link href="/" className={styles.logoLink} onClick={closeMenu}>
                 <Image
@@ -178,7 +157,6 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Tablet/Mobile: Menu toggle button */}
             <button
               type="button"
               className={styles.menuBtn}
@@ -190,119 +168,156 @@ export default function Header() {
               <span className={styles.menuIcon} aria-hidden="true" />
             </button>
 
-            {/* Desktop nav */}
             <nav className={styles.nav} aria-label="Primary navigation">
               {nav.map((item) =>
                 item.children ? (
                   <div key={item.label} className={styles.dropdown}>
-                    <button type="button" className={styles.linkBtn}>
+                    <button
+                      type="button"
+                      className={`${styles.linkBtn} ${
+                        isDropdownActive(item.children) ? styles.activeLink : ""
+                      }`}
+                    >
                       {item.label}
                       <span className={styles.caret}></span>
                     </button>
 
                     <div className={styles.dropdownMenu}>
                       {item.children.map((child) => (
-                        <Link key={child.href} href={child.href} className={styles.dropdownLink}>
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`${styles.dropdownLink} ${
+                            isActiveLink(child.href)
+                              ? styles.activeDropdownLink
+                              : ""
+                          }`}
+                        >
                           {child.label}
                         </Link>
                       ))}
                     </div>
                   </div>
                 ) : (
-                  <Link key={item.href} href={item.href} className={styles.link}>
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`${styles.link} ${
+                      isActiveLink(item.href) ? styles.activeLink : ""
+                    }`}
+                  >
                     {item.label}
                   </Link>
                 )
               )}
             </nav>
 
-
-
-
-
-            {/* Right: actions */}
             <div className={styles.actions}>
               <Link href="https://sfs-muportal.com/#/login" className={styles.login}>
                 Login
               </Link>
-              <Link href="https://stonefortsecurities.com/registration/" className={styles.live}>
+              <Link
+                href="https://stonefortsecurities.com/registration/"
+                className={styles.live}
+              >
                 Live Account
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Mobile/Tablet Drawer */}
         <div className={`${styles.drawerWrap} ${open ? styles.drawerOpen : ""}`}>
           <div className={styles.backdrop} onClick={closeMenu} aria-hidden="true" />
 
-          <aside className={styles.drawer} role="dialog" aria-modal="true" aria-label="Menu">
+          <aside
+            className={styles.drawer}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu"
+          >
             <div className={styles.drawerTop}>
               <span className={styles.drawerTitle}>Menu</span>
-              <button type="button" className={styles.closeBtn} onClick={closeMenu} aria-label="Close menu">
+              <button
+                type="button"
+                className={styles.closeBtn}
+                onClick={closeMenu}
+                aria-label="Close menu"
+              >
                 ✕
               </button>
             </div>
-{/* 
-            <nav id="primary-navigation" className={styles.drawerNav} aria-label="Primary navigation (mobile)">
-              {nav.map((item) => (
-                <Link key={item.href} href={item.href} className={styles.drawerLink} onClick={closeMenu}>
-                  {item.label}
-                </Link>
-              ))}
-            </nav> */}
 
             <nav
-  id="primary-navigation"
-  className={styles.drawerNav}
-  aria-label="Primary navigation (mobile)"
->
-  {nav.map((item) =>
-    item.children ? (
-      <div key={item.label} className={styles.drawerGroup}>
-        <div className={styles.drawerParent}>{item.label}</div>
-
-        <div className={styles.drawerSubmenu}>
-          {item.children.map((child) => (
-            <Link
-              key={child.href}
-              href={child.href}
-              className={styles.drawerSublink}
-              onClick={closeMenu}
+              id="primary-navigation"
+              className={styles.drawerNav}
+              aria-label="Primary navigation (mobile)"
             >
-              {child.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    ) : (
-      <Link
-        key={item.href}
-        href={item.href}
-        className={styles.drawerLink}
-        onClick={closeMenu}
-      >
-        {item.label}
-      </Link>
-    )
-  )}
-</nav>
+              {nav.map((item) =>
+                item.children ? (
+                  <div key={item.label} className={styles.drawerGroup}>
+                    <div
+                      className={`${styles.drawerParent} ${
+                        isDropdownActive(item.children)
+                          ? styles.activeDrawerParent
+                          : ""
+                      }`}
+                    >
+                      {item.label}
+                    </div>
 
-    
+                    <div className={styles.drawerSubmenu}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`${styles.drawerSublink} ${
+                            isActiveLink(child.href)
+                              ? styles.activeDrawerLink
+                              : ""
+                          }`}
+                          onClick={closeMenu}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`${styles.drawerLink} ${
+                      isActiveLink(item.href)
+                        ? styles.activeDrawerLinkBox
+                        : ""
+                    }`}
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
+            </nav>
 
             <div className={styles.drawerActions}>
-              <Link href="/login" className={styles.drawerLogin} onClick={closeMenu}>
+              <Link
+                href="https://sfs-muportal.com/#/login"
+                className={styles.drawerLogin}
+                onClick={closeMenu}
+              >
                 Login
               </Link>
-              <Link href="/live-account" className={styles.drawerLive} onClick={closeMenu}>
+              <Link
+                href="https://stonefortsecurities.com/registration/"
+                className={styles.drawerLive}
+                onClick={closeMenu}
+              >
                 Live Account
               </Link>
             </div>
           </aside>
         </div>
       </header>
-
-     
     </>
   );
 }

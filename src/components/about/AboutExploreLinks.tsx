@@ -71,9 +71,7 @@ export default function AboutExploreLinks() {
             <h3 className={styles.title}>{it.title}</h3>
             <p className={styles.desc}>{it.desc}</p>
 
-            <Link className={styles.link} href={it.href}>
-              Explore <span className={styles.arrow} aria-hidden="true">→</span>
-            </Link>
+         
           </div>
 
           <div className={styles.media}>

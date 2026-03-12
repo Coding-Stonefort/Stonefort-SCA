@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Stonefort Securities UAE",
-  description: "SCA regulated online trading broker in the UAE",
+  description: "CMA regulated online trading broker in the UAE",
 };
 
 export default function RootLayout({

@@ -50,7 +50,7 @@ export default function HeroAccounts() {
         {/* RIGHT IMAGE */}
         <div className={styles.right}>
           <Image
-            src="/images/accounts/marketheromockup.webp"
+            src="/images/accounts/Account-Designp.webp"
             alt="Trading Platform"
             width={900}
             height={600}

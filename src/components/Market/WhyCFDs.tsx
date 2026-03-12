@@ -3,22 +3,22 @@ import styles from "./WhyCFDs.module.css";
 const POINTS = [
   {
     title: "Leverage access",
-    text: "Trade with leverage to keep entry costs low while increasing the potential for profit, understanding that losses can also be magnified.",
+    text: "Use leverage to optimise capital efficiency, keeping entry costs low while increasing market exposure, while understanding that profits and losses are both amplified.",
     chips: ["Margin", "Exposure", "Risk"],
   },
   {
     title: "Go long or short",
-    text: "Take advantage of both rising and falling market conditions with long and short positions.",
+    text: "Benefit from rising and falling market conditions by taking long or short positions, allowing strategies to adapt dynamically to market movements.",
     chips: ["Buy", "Sell", "Two-way"],
   },
   {
     title: "One account, many markets",
-    text: "Access thousands of markets through a single trading account.",
+    text: "Access thousands of global markets seamlessly through a single trading account, enabling diversified trading across multiple asset classes and international instruments.",
     chips: ["FX", "Indices", "Shares", "Commodities"],
   },
   {
     title: "Extended trading hours",
-    text: "Trade beyond standard market hours with select instruments available around the clock.",
+    text: "Trade selected instruments beyond standard hours, with certain markets available around the clock to support continuous opportunities and flexible trading strategies.",
     chips: ["24/5", "24/7*", "Select markets"],
   },
 ];

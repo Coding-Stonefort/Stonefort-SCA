@@ -1,39 +1,35 @@
-import { Hero } from "@/components/Home";
-import { MetaBar } from "@/components/Home";
-import { TrustedPlatforms } from "@/components/Home";
-import { WhyChoose } from "@/components/Home";
-import { ExperiencedTraders } from "@/components/Home";
-import { CFDMarketsPro } from "@/components/Home";
-import { BeginnerTradersSection } from "@/components/Home";
-import { FlexibleTradingSolutions } from "@/components/Home";
-import { RiskFreeDemoCta } from "@/components/Home";
-import { PaymentGatewaysSlider } from "@/components/Home";
-import { AccountsPlans } from "@/components/Home";
-import { Steps3 } from "@/components/Home";
-import { GetStartedCTA } from "@/components/Home";
-import AboutUpgradeExperience from "@/components/about/AboutUpgradeExperience";
-import AboutExploreLinks from "@/components/about/AboutExploreLinks";
 
-export default function HomePage() {
+
+import AboutHero from "@/components/about/AboutHero";
+import AboutWhyChoose from "@/components/about/AboutWhyChoose";
+import AboutIntegrity from "@/components/about/AboutIntegrity";
+import AboutMissionVision from "@/components/about/AboutMissionVision";
+import AboutExploreMarkets from "@/components/about/AboutExploreMarkets";
+
+
+import AboutMoneyProtected from "@/components/about/AboutMoneyProtected";
+import { GetStartedCTA } from "@/components/product";
+import RelationshipSection from "@/components/about/RelationshipSection";
+
+export const metadata = {
+  title: "Stonefort Securities",
+  description:
+    "Learn about Stonefort Securities, a broker operating under a licence issued by the UAE Capital Market Authority (CMA).",
+};
+
+export default function AboutPage() {
   return (
     <>
-      <Hero />
-      <MetaBar />
-      <TrustedPlatforms />
-      <WhyChoose />
-      <ExperiencedTraders />
-      <CFDMarketsPro />
-      <BeginnerTradersSection />
+      <AboutHero />
+      <AboutWhyChoose />
+      <AboutIntegrity />
+      <AboutMissionVision />
+      <AboutExploreMarkets />
+      <RelationshipSection />
+   
 
-      <FlexibleTradingSolutions />
-      <AboutUpgradeExperience />
-      <RiskFreeDemoCta />
-            <AboutExploreLinks />
-      {/* <PaymentGatewaysSlider /> */}
-      <AccountsPlans />
-      <Steps3 />
-       <GetStartedCTA />
-
+      <AboutMoneyProtected />
+      <GetStartedCTA />
     </>
   );
 }

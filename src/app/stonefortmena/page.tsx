@@ -8,7 +8,7 @@ import AboutExploreMarkets from "@/components/about/AboutExploreMarkets";
 
 
 import AboutMoneyProtected from "@/components/about/AboutMoneyProtected";
-import { GetStartedCTA } from "@/components/Home";
+import { GetStartedCTA } from "@/components/product";
 import RelationshipSection from "@/components/about/RelationshipSection";
 
 export const metadata = {

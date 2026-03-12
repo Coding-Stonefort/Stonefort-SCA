@@ -1,0 +1,252 @@
+/* WhyChoose.module.css */
+
+.section{
+  padding: 10px 0 ;
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      900px 520px at 20% 55%,     /* LEFT + CENTER */
+      rgba(135,171,147,.22),
+      transparent 65%
+    ),
+    radial-gradient(
+      700px 400px at 55% 60%,     /* CENTER soft glow */
+      rgba(77,110,85,.18),
+      transparent 70%
+    );
+}
+
+.container{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.head{
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.kicker{
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(234,240,242,.60);
+}
+
+.title{
+  margin: 14px 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+.title span{
+  color: var(--sfs-mint);
+}
+.sub{
+  margin: 0 auto;
+  max-width: 68ch;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+/* Card base (updated to match ExecutionOutcomes hover feel) */
+.card{
+  position: relative;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.15);
+  box-shadow: 0 16px 50px rgba(0,0,0,.28);
+    min-height: 190px;     /* tweak: 180–220px */
+  backdrop-filter: blur(10px);
+
+  /* smooth premium transition */
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+
+  /* animation default state (for fadeUp) */
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+/* Hover lift like ExecutionOutcomes */
+.card:hover{
+  transform: translateY(-6px);
+  background: rgba(255,255,255,.05);
+  border-color: #4D6E55;
+  box-shadow:
+    0 20px 60px rgba(77,110,85,.30),
+    0 0 0 1px rgba(77,110,85,.25);
+}
+
+/* top row */
+.cardTop{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bullet{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--sfs-mint);
+  box-shadow: 0 0 0 5px rgba(135,171,147,.14);
+  flex: 0 0 auto;
+}
+
+.cardTitle{
+  margin: 0;
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
+  font-weight: 700;
+  letter-spacing: .15px;
+  color: #fff;
+}
+
+.cardDesc{
+  margin: 0;
+  line-height: var(--card-desc-lh);
+  font-size: var(--card-desc-size);
+  color: var(--muted);
+  flex: 1;
+}
+
+/* When in view → animate in with stagger */
+.gridIn .card{
+  animation: fadeUp .55s ease forwards;
+  animation-delay: var(--d);
+}
+
+@keyframes fadeUp{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA */
+.ctaWrap{
+  margin-top: 22px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+.ctaBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  min-width: 210px;
+
+  /* Default = White */
+  background: #fff;
+  color: #101711;
+  border: 1px solid rgba(135,171,147,.30);
+
+  box-shadow: 0 16px 50px rgba(0,0,0,.25);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+.ctaBtn:hover{
+  transform: translateY(-2px);
+
+  /* Swap to soft green glass */
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
+  color: #fff;
+
+  box-shadow: 0 18px 55px rgba(77,110,85,.35);
+}
+
+.ctaNote{
+  margin: 0;
+  font-size: 12.5px;
+  color: rgba(234,240,242,.70);
+  text-align: center;
+  max-width: 80ch;
+}
+
+@media (min-width: 981px){
+ 
+  .grid > .card:nth-child(-n+3){
+    grid-column: span 2; 
+  }
+
+
+  .grid > .card:nth-child(n+4){
+    grid-column: span 3; /* 3+3 = 6 */
+  }
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px){
+  .section{
+    padding: 0px 0 ;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .title{
+
+  font-weight: 600;
+  font-size: 32px;
+
+}
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .card, .gridIn .card{
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

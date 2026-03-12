@@ -1,5 +1,5 @@
-import styles from "../Home/CFDMarketsPro.module.css";
-import MarketBoard from "../Home/MarketBoard";
+import styles from "../product/CFDMarketsPro.module.css";
+import MarketBoard from "../product/MarketBoard";
 
 export default function CFDMarketsPro() {
   return (

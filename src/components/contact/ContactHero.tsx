@@ -58,9 +58,9 @@ export default function ContactHero() {
           <div className={styles.right}>
             <div className={styles.mockWrap}>
               <Image
-                src="/images/contact/heromockup.webp"
+                src="/images/contact/24-7-support.webp"
                 alt="Stonefort mobile support app mockup"
-                width={540}
+                width={740}
                 height={1080}
                 priority
                 className={styles.mock}

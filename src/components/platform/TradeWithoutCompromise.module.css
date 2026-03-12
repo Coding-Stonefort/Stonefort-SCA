@@ -3,7 +3,7 @@
 ========================================================= */
 
 .section{
-  padding:56px 16px;
+  padding: 30px 16px;
   background: var(--background);
   position: relative;
   overflow: hidden;
@@ -30,18 +30,20 @@
 }
 
 .title{
- margin: 14px 0 10px;
+  margin: 14px 0 10px;
   color: rgba(255,255,255,.92);
   font-weight: 500;
   font-size: 54px;
   line-height: 1.05;
   letter-spacing: .02em;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
+
 .title span{
   color: var(--sfs-mint);
 }
+
 .sub{
   margin: 0 0 20px;
   font-size: var(--section-sub-size);
@@ -50,17 +52,16 @@
 }
 
 .pillRow{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .pill{
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 12px;
-
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.10);
   color: var(--foreground);
@@ -71,26 +72,35 @@
 ========================================================= */
 
 .grid{
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:16px;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
 /* =========================================================
-   CARDS (Master Card System)
+   SHARED VIBRANT CARD STYLE
 ========================================================= */
 
-.card{
-  background: rgba(255,255,255,.02);
+.card,
+.longCard{
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.03) 0%,
+    rgba(255,255,255,.018) 100%
+  );
   border: 1px solid rgba(135,171,147,.15);
   border-radius: 18px;
-  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.03);
 
-  padding: 22px;
-
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 
   transition:
     transform .4s cubic-bezier(.22,.61,.36,1),
@@ -99,13 +109,95 @@
     background .3s ease;
 }
 
-.card:hover{
+.card{
+  padding: 22px;
+}
+
+.longCard{
+  padding: 28px;
+}
+
+/* soft top mint glow */
+.card::before,
+.longCard::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      220px 120px at 12% 10%,
+      rgba(183,230,198,.16),
+      transparent 65%
+    ),
+    radial-gradient(
+      180px 100px at 88% 0%,
+      rgba(183,230,198,.10),
+      transparent 70%
+    );
+
+  opacity: .95;
+}
+
+/* smooth bottom wave glow like screenshot */
+.card::after,
+.longCard::after{
+  content:"";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -40px;
+  height: 90px;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(140px 68px at 12% 58%, rgba(183,230,198,.82), transparent 72%),
+    radial-gradient(170px 78px at 34% 70%, rgba(183,230,198,.92), transparent 74%),
+    radial-gradient(180px 82px at 52% 54%, rgba(183,230,198,.88), transparent 74%),
+    radial-gradient(165px 76px at 72% 68%, rgba(183,230,198,.90), transparent 74%),
+    radial-gradient(130px 64px at 90% 56%, rgba(183,230,198,.82), transparent 72%);
+  filter: blur(16px);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* keep content above overlays */
+.card > *,
+.longCard > *{
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover,
+.longCard:hover{
   transform: translateY(-4px);
-  border-color: var(--sfs-green-main);
+  border-color: rgba(183,230,198,.45);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(183,230,198,.08) 0%,
+      rgba(255,255,255,.025) 100%
+    );
   box-shadow:
     0 22px 70px rgba(77,110,85,.30),
-    0 0 0 1px rgba(77,110,85,.25);
+    0 0 0 1px rgba(183,230,198,.16),
+    0 0 40px rgba(183,230,198,.10);
 }
+
+.card:hover::after,
+.longCard:hover::after{
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
 
 .tag{
   font-size: 11px;
@@ -113,14 +205,31 @@
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 10px;
+  transition: color .3s ease;
 }
 
 .cardTitle{
   font-size: var(--card-title-size);
   line-height: var(--card-title-lh);
-  font-weight: 700; /* spec range 800-950 */
+  font-weight: 700;
   color: var(--foreground);
   margin: 0 0 8px;
+  transition: color .3s ease;
+}
+
+.cardTitle::before{
+  content:"";
+  display: block;
+  width: 42px;
+  height: 3px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  background: linear-gradient(
+    90deg,
+    rgba(183,230,198,.95),
+    rgba(183,230,198,.25)
+  );
+  box-shadow: 0 0 14px rgba(183,230,198,.25);
 }
 
 .cardDesc{
@@ -128,54 +237,57 @@
   line-height: var(--card-desc-lh);
   color: rgba(234,240,242,.75);
   margin: 0;
+  transition: color .3s ease;
 }
 
-/* =========================================================
-   LONG CARD (Still Master Card System)
-========================================================= */
-
-.longCard{
-  background: rgba(255,255,255,.02);
-  border: 1px solid rgba(135,171,147,.15);
-  border-radius: 18px;
-  box-shadow: 0 18px 60px rgba(0,0,0,.45);
-
-  padding: 28px;
-
-  display:flex;
-  flex-direction:column;
-
-  transition:
-    transform .4s cubic-bezier(.22,.61,.36,1),
-    border-color .3s ease,
-    box-shadow .3s ease,
-    background .3s ease;
+.card:hover .tag,
+.longCard:hover .tag{
+  color: rgba(255,255,255,.82);
 }
 
-.longCard:hover{
-  transform: translateY(-4px);
-  border-color: var(--sfs-green-main);
-  box-shadow:
-    0 22px 70px rgba(77,110,85,.30),
-    0 0 0 1px rgba(77,110,85,.25);
+.card:hover .cardTitle,
+.longCard:hover .cardTitle{
+  color: #fff;
+}
+
+.card:hover .cardDesc,
+.longCard:hover .cardDesc{
+  color: rgba(255,255,255,.88);
 }
 
 /* =========================================================
    Responsive
 ========================================================= */
 
-@media(max-width:900px){
+@media (max-width: 900px){
   .grid{
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width:640px){
+@media (max-width: 640px){
   .title{
     font-size: 32px;
   }
-  .top{
 
-  margin-bottom: 20px;
-}
+  .top{
+    margin-bottom: 20px;
+  }
+
+  .card{
+    padding: 20px;
+  }
+
+  .longCard{
+    padding: 22px;
+  }
+
+  .card::after,
+  .longCard::after{
+    left: -14%;
+    right: -14%;
+    bottom: -42px;
+    height: 110px;
+    filter: blur(15px);
+  }
 }

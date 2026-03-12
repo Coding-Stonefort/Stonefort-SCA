@@ -80,7 +80,7 @@ export default function Footer() {
         {/* Legal / risk */}
         <div className={styles.legalBox}>
           <p className={styles.legalText}>
-            Stonefort Securities LLC is licensed by the Capital Market Authority, UAE, under Category 5 (License No. 20200000226). Stonefort Securities LLC is authorized solely to conduct financial advisory, promotional, and client introduction activities in relation to financial products and services offered by Stonefort Securities Ltd.  
+           Stonefort Securities LLC is licensed by the Capital Market Authority, UAE, under Category 5 (License No. 20200000226). Stonefort Securities LLC is authorized solely to conduct financial advisory, promotional, and client introduction activities in relation to financial products and services offered by Stonefort Securities Ltd.  
 
 <br/><br/>Stonefort Securities LLC does not hold client funds or execute trades; its role is strictly limited to financial awareness and client introductions within the approved regulatory framework.  
           </p>

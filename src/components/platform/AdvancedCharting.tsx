@@ -1,4 +1,5 @@
 // components/home/AdvancedCharting.tsx
+import Image from "next/image";
 import styles from "./AdvancedCharting.module.css";
 
 const features = [
@@ -22,21 +23,18 @@ const features = [
     title: "Fully Customisable Workspace",
     desc: "Personalise your trading environment including layouts, charts, and tools, and save everything as reusable templates.",
   },
-
 ];
 
 export default function AdvancedCharting() {
   return (
     <section className={styles.section}>
+      
+      {/* NORMAL CONTENT */}
       <div className={styles.inner}>
         <div className={styles.head}>
           <h2 className={styles.title}>
             Advanced Charting and <span>Trade Execution</span>
           </h2>
-          {/* <p className={styles.desc}>
-            Trade smarter with chart-first execution, powerful analysis tools,
-            and a workspace you can fully tailor to your strategy.
-          </p> */}
         </div>
 
         <div className={styles.grid}>
@@ -47,24 +45,37 @@ export default function AdvancedCharting() {
             </div>
           ))}
         </div>
+      </div>
 
-        <div className={styles.ctaBlock}>
-          <h3>Discover more trading tools</h3>
-          <p>
-            Explore platform features designed to help you analyse markets and
-            execute with confidence.
-          </p>
+      {/* FULL WIDTH BLOCK */}
+      <div className={styles.ctaBlock}>
+        <div className={styles.ctaInner}>
+
+          <h3>Free Tools</h3>
+
+          <div className={styles.visual}>
+            <Image
+              src="/images/platform/freetoolsmockup.webp"
+              alt="Trading tools interface"
+              width={1400}
+              height={700}
+              className={styles.image}
+              priority
+            />
+          </div>
 
           <div className={styles.buttons}>
-            <a href="/about" className={styles.outlineBtn}>
-              Discover More
-            </a>
-            <a href="https://stonefortsecurities.com/registration/" className={styles.primaryBtn}>
+            <a
+              href="https://stonefortsecurities.com/registration/"
+              className={styles.primaryBtn}
+            >
               Get Started
             </a>
           </div>
+
         </div>
       </div>
+
     </section>
   );
 }

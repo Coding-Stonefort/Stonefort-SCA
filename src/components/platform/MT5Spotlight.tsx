@@ -1,4 +1,3 @@
-// components/platform/MT5Spotlight/MT5Spotlight.tsx
 import Image from "next/image";
 import styles from "./MT5Spotlight.module.css";
 
@@ -26,8 +25,25 @@ const items = [
 export default function MT5Spotlight() {
   return (
     <section className={styles.section} aria-label="MetaTrader 5 spotlight">
+
+      {/* TOP HEADER */}
+      <div className={styles.header}>
+        <div className={styles.kicker}>MetaTrader 5</div>
+
+        <h2 className={styles.title}>
+          Advanced Trading with <span>MetaTrader 5</span>
+        </h2>
+
+        <p className={styles.desc}>
+          Advanced tools, integrated insights, and exclusive EAs and indicators
+          designed to elevate your trading experience.
+        </p>
+      </div>
+
+      {/* GRID */}
       <div className={styles.inner}>
-        {/* LEFT VISUAL */}
+
+        {/* LEFT MOCKUP */}
         <div className={styles.visual}>
           <div className={styles.visualFrame}>
             <Image
@@ -39,37 +55,30 @@ export default function MT5Spotlight() {
               priority
             />
           </div>
+
           <div className={styles.visualGlow} />
         </div>
 
-        {/* RIGHT CONTENT */}
-        <div className={styles.content}>
-          <div className={styles.kicker}>MetaTrader 5</div>
-          <h2 className={styles.title}>Advanced Trading with <span>MetaTrader 5</span></h2>
-          <p className={styles.desc}>
-            Advanced tools, integrated insights, and exclusive EAs and indicators
-            designed to elevate your trading experience.
-          </p>
+        {/* RIGHT FEATURES */}
+        <div className={styles.list}>
+          {items.map((it) => (
+            <div className={styles.row} key={it.n}>
+              <div className={styles.num}>{it.n}</div>
 
-          <div className={styles.list}>
-            <div className={styles.rail} />
-            {items.map((it) => (
-              <div className={styles.row} key={it.n}>
-                <div className={styles.num}>{it.n}</div>
-                <div className={styles.text}>
-                  <h3>{it.title}</h3>
-                  <p>{it.desc}</p>
-                </div>
+              <div className={styles.text}>
+                <h3>{it.title}</h3>
+                <p>{it.desc}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
 
           <div className={styles.ctaRow}>
             <a className={styles.cta} href="/platform/metatrader-5">
-              Explore MetaTrader 5
+              Get Started
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );

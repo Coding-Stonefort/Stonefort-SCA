@@ -1,12 +1,14 @@
 /* AdvancedCharting.module.css
-   UPDATED to match Stonefort Master Typography Spec
-   (Do NOT edit :root tokens)
+   Vibrant version with #b7e6c6 touch
+   - keeps your existing animation timing
+   - adds soft mint glow + bottom wave accent inside cards
 */
 
 .section {
   position: relative;
-  padding: 56px 16px;              /* master section padding */
+  padding: 6px 16px 56px;
   background: var(--background);
+
   overflow: hidden;
 }
 
@@ -16,7 +18,7 @@
   }
 }
 
-/* soft center glow (kept) */
+/* soft center glow */
 .section::before {
   content: "";
   position: absolute;
@@ -40,40 +42,52 @@
   margin-bottom: 48px;
 }
 
-/*  Section Title (Master Spec) */
 .title {
- margin: 14px 0 10px;
+  margin: 14px 0 10px;
   color: rgba(255,255,255,.92);
   font-weight: 500;
   font-size: 54px;
   line-height: 1.05;
   letter-spacing: .02em;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
+
 .title span{
   color: var(--sfs-mint);
 }
-/*  Section Description (Master Spec) */
+
 .desc {
   font-size: var(--section-sub-size);
   line-height: 1.7;
   color: rgba(234,240,242,.78);
 }
 
-/* Grid stays same */
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
 
-/* Card (kept consistent with Master Card system visually) */
+/* Vibrant card */
 .card {
-  background: rgba(255,255,255,.02);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.03) 0%,
+    rgba(255,255,255,.018) 100%
+  );
   border: 1px solid rgba(135,171,147,.15);
   border-radius: 18px;
   padding: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.03);
 
   transition:
     transform .4s cubic-bezier(.22,.61,.36,1),
@@ -82,67 +96,160 @@
     background .3s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--sfs-green-main);
-  box-shadow:
-    0 22px 70px rgba(77,110,85,.30),
-    0 0 0 1px rgba(77,110,85,.25);
+/* top soft mint glow */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    radial-gradient(
+      220px 120px at 12% 10%,
+      rgba(183,230,198,.16),
+      transparent 65%
+    ),
+    radial-gradient(
+      180px 100px at 88% 0%,
+      rgba(183,230,198,.10),
+      transparent 70%
+    );
+
+  opacity:.95;
 }
 
-/*  Card Title (Master Spec) */
+/* bottom wave accent */
+.card::after{
+  content:"";
+  position:absolute;
+  left:-8%;
+  right:-8%;
+  bottom:-28px;
+  height:88px;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    radial-gradient(60px 26px at 8% 45%, rgba(183,230,198,94), transparent 70%),
+    radial-gradient(90px 36px at 26% 58%, rgba(183,230,198,.98), transparent 72%),
+    radial-gradient(100px 38px at 48% 40%, rgba(183,230,198,.72), transparent 72%),
+    radial-gradient(90px 34px at 70% 60%, rgba(183,230,198,.86), transparent 72%),
+    radial-gradient(70px 28px at 90% 44%, rgba(183,230,198,.92), transparent 72%);
+  filter: blur(10px);
+  opacity: .92;
+  transform: translateY(0);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* keep content above effects */
+.card > *{
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(183,230,198,.45);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(183,230,198,.08) 0%,
+      rgba(255,255,255,.025) 100%
+    );
+
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.30),
+    0 0 0 1px rgba(183,230,198,.16),
+    0 0 40px rgba(183,230,198,.08);
+}
+
+.card:hover::after{
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
 .card h3 {
   font-size: var(--card-title-size);
   line-height: var(--card-title-lh);
   font-weight: 700;
   color: var(--foreground);
   margin-bottom: 10px;
+  transition: color .3s ease;
 }
 
-/* Card Description (Master Spec) */
+.card h3::before{
+  content:"";
+  display:block;
+  width:42px;
+  height:3px;
+  border-radius:999px;
+  margin-bottom:14px;
+  background: linear-gradient(
+    90deg,
+    rgba(183,230,198,.95),
+    rgba(183,230,198,.25)
+  );
+  box-shadow: 0 0 14px rgba(183,230,198,.25);
+}
+
 .card p {
   font-size: var(--card-desc-size);
   line-height: var(--card-desc-lh);
   color: rgba(234,240,242,.75);
+  transition: color .3s ease;
 }
 
-/* =========================
-   CTA Block Typography Updated
-========================= */
+.card:hover h3{
+  color: #fff;
+}
 
+.card:hover p{
+  color: rgba(255,255,255,.88);
+}
+
+/* CTA block */
 .ctaBlock {
   text-align: center;
   margin-top: 90px;
   padding: 60px 40px;
   border-radius: 22px;
-  background: linear-gradient(
-    145deg,
-    rgba(77,110,85,.15),
-    rgba(16,23,17,.9)
-  );
+  background: #fff;
   border: 1px solid rgba(135,171,147,.25);
 }
 
-/* CTA Heading */
 .ctaBlock h3 {
- margin: 14px 0 10px;
-  color: rgba(255,255,255,.92);
+  margin: 14px 0 10px;
+  color: #101711;
   font-weight: 500;
   font-size: 54px;
   line-height: 1.05;
   letter-spacing: .02em;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  text-shadow: 0 18px 60px rgba(0,0,0,.55);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.12);
 }
 
-/* CTA Description */
 .ctaBlock p {
   font-size: var(--section-sub-size);
   line-height: 1.7;
-  color: rgba(234,240,242,.78);
+  color: #101711;
   margin-bottom: 28px;
 }
 
+/* image mockup */
+.visual{
+  width: min(100%, 1080px);
+  margin: 24px auto 28px;
+}
+
+.image{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* buttons */
 .buttons{
   display:flex;
   justify-content:center;
@@ -150,7 +257,6 @@
   flex-wrap:wrap;
 }
 
-/* Base button */
 .primaryBtn,
 .outlineBtn{
   display:inline-flex;
@@ -162,7 +268,7 @@
   padding:0 22px;
   border-radius:14px;
 
-  font-size:16px;       
+  font-size:16px;
   font-weight:600;
   text-decoration:none;
 
@@ -174,23 +280,33 @@
     box-shadow .3s ease;
 }
 
-/* Primary = White (Master) */
 .primaryBtn{
-  background:#fff;
-  color:#101711;
-  border:1px solid rgba(135,171,147,.30);
-  box-shadow:0 16px 45px rgba(0,0,0,.18);
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration:none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+
+  border: 1px solid var(--sfs-green-main);
+  background: var(--sfs-green-main);
+
+  transition:
+    transform .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
 }
 
 .primaryBtn:hover{
-  transform:translateY(-2px);
-  background:rgba(77,110,85,.30);
-  border-color:rgba(135,171,147,.45);
-  color:#fff;
-  box-shadow:0 18px 55px rgba(77,110,85,.35);
+  transform: translateY(-1px);
+  background: #3f5c48;
+  box-shadow: 0 10px 28px rgba(77,110,85,.35);
 }
 
-/* Secondary = Glass Green (Master) */
 .outlineBtn{
   background:rgba(77,110,85,.30);
   color:#fff;
@@ -206,24 +322,49 @@
   box-shadow:0 16px 45px rgba(0,0,0,.18);
 }
 
-/* Mobile full-width like Master */
+/* responsive */
+@media (max-width: 1100px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
 @media (max-width:560px){
   .primaryBtn,
   .outlineBtn{
     width:100%;
   }
-  .title{ 
+
+  .title{
     font-size: 32px;
   }
+
   .ctaBlock h3 {
     font-size: 32px;
   }
-    .grid{
+
+  .grid{
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .head {
- 
-  margin-bottom: 20px;
-}
+    margin-bottom: 20px;
+  }
+
+  .card{
+    padding: 22px;
+  }
+
+  .ctaBlock{
+    margin-top: 56px;
+    padding: 36px 20px;
+  }
 }

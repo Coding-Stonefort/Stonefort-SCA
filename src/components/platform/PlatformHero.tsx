@@ -12,7 +12,7 @@ export default function PlatformHero() {
           <h1 className={styles.title}>Explore Our <span>Trading Platforms</span> </h1>
 
           <p className={styles.desc}>
-            Choose from our intuitive WebTrader, mobile app, MetaTrader 5, and AutoChartist. Powerful tools, real-time pricing, and seamless execution designed to support your trading journey.
+            Choose from our intuitive WebTrader, Stonefortrader, MetaTrader 5, and AutoChartist. Powerful tools, real-time pricing, and seamless execution designed to support your trading journey.
           </p>
 
           <div className={styles.ctaRow}>
