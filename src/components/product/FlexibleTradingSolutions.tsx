@@ -13,10 +13,10 @@ const platforms: Platform[] = [
     title: "Stonefortrader",
     desc: "StonefortTrader is our proprietary app, providing tools for trading multiple asset classes with Stonefort liquidity and execution.",
     features: [
-      "Advanced trading tools – Widgets and calculators to support informed decisions.",
-      "Technical indicators – Analyse trends and market movements.",
-      "Real-time account insights – Monitor trading activity and performance.",
-      "Multi-device access – Trade seamlessly on mobile, web, and desktop.",
+      "Algorithmic trading support – Run automated strategies through Expert Advisors.",
+      "Advanced order management – Flexible order types for precise trade execution.",
+      "Integrated market analysis – Multiple charts and timeframes for deeper insights.",
+      "Secure trading environment – Reliable platform built for stable performance.",
     ],
   },
   {
@@ -40,8 +40,7 @@ export default function FlexibleTradingSolutions() {
             Flexible <span>Trading Solutions</span>
           </h2>
           <p className={styles.subtext}>
-            Stonefort offers clients access to multiple trading platforms, including MT5 and
-            StoneforTrader, to suit different trading styles and preferences.
+            Stonefortrader is the proprietary trading app, offering advanced tools for trading multiple asset classes with Stonefort liquidity and execution.
           </p>
         </header>
 

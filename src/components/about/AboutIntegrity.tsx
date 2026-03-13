@@ -27,7 +27,7 @@ export default function AboutIntegritySection() {
             <Link className={styles.ctaPrimary} href="https://stonefortsecurities.com/registration/">
               Open an account
             </Link>
-            <Link className={styles.ctaGhost} href="https://sfs-muportal.com/#/login">
+            <Link className={styles.ctaGhost} href="https://stonefortsecurities.com/all-login">
               Login
             </Link>
           </div>

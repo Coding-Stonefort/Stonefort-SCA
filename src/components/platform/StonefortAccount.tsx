@@ -23,7 +23,7 @@ const STEPS = [
   {
     num: "2",
     title: "Verify",
-    text: "Secure your account with a simple verification process. Your safety always comes first.",
+    text: "Secure your account with a simple verification process. Safety always comes first.",
     total: 3,
   },
   {

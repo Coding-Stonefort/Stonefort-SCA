@@ -12,7 +12,7 @@ const items = [
   {
     title: "Dedicated Client Portal",
     desc:
-      "Track, manage and control your trading account with ease from one secure and intuitive dashboard",
+      "Track, manage and control your trading account with ease from one secure, reliable and intuitive dashboard.",
     icon: "/images/about/Client-portal.webp",
   },
   {

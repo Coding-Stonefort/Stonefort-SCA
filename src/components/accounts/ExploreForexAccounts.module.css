@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 46px;
-  align-items: start;
+  align-items: center;
 
   border-radius: 18px;
   padding: 26px;
@@ -192,8 +192,11 @@
 /* RIGHT */
 .right{
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 14px;
+  align-items: center;
 }
 
 /* stepsCard should behave like a card */

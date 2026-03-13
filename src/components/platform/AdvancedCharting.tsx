@@ -4,24 +4,24 @@ import styles from "./AdvancedCharting.module.css";
 
 const features = [
   {
-    title: "Trade Directly from Charts",
-    desc: "Open, adjust, and manage trades straight from the chart using simple click and drag controls for precise execution.",
+    title: "Trade From Charts",
+    desc: "Open, adjust, and manage trades directly from interactive charts using simple click-and-drag controls for precise order execution every time.",
   },
   {
     title: "Powerful Analysis Tools",
-    desc: "Apply a wide range of technical tools and save your preferred setups as templates for consistent analysis.",
+    desc: "Apply a wide range of technical tools and save your preferred chart setups as templates for consistent, accurate market analysis.",
   },
   {
-    title: "Flexible Timeframes and Chart Types",
-    desc: "Study market movements across multiple time intervals and choose chart styles that suit your trading approach.",
+    title: "Flexible Timeframes Charts",
+    desc: "Study price movements across multiple timeframes and select chart styles that best suit your personal trading strategy efficiently.",
   },
   {
     title: "Enhanced Drawing Tools",
-    desc: "Plan trades with over 50 drawing tools for trend lines, support and resistance levels, patterns, and price projections.",
+    desc: "Plan trades with over fifty drawing tools for trendlines, support, resistance, patterns, and detailed price projections with confidence.",
   },
   {
-    title: "Fully Customisable Workspace",
-    desc: "Personalise your trading environment including layouts, charts, and tools, and save everything as reusable templates.",
+    title: "Customizable Workspace Layouts",
+    desc: "Personalize your trading environment, including layouts, charts, and tools, saving everything as reusable templates for improved trading workflow.",
   },
 ];
 

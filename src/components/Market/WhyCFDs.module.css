@@ -38,7 +38,7 @@
 
 .layout{
   display:grid;
-  grid-template-columns: .95fr 1.05fr;
+  grid-template-columns: .85fr 1.15fr;
   gap: 26px;
   align-items: start;
 }
@@ -249,7 +249,7 @@
 }
 
 .pill{
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(234,240,242,.78);
   padding: 7px 10px;
   border-radius: 999px;

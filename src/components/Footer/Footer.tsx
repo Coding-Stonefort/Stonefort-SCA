@@ -8,102 +8,172 @@ const menu = [
   { href: "/Market", label: "Market" },
   { href: "/accounts", label: "Accounts" },
   { href: "/platform", label: "Platform" },
-  { href: "/about", label: "About Us" },
+  { href: "/product", label: "Product" },
   { href: "/contact", label: "Contact Us" },
 ];
 
 const socials = [
-  { href: "https://www.facebook.com/people/Stonefort-Securities/61576805064272/?mibextid=wwXIfr&rdid=OLRs6M27PoIBo4as&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16QwwioCGv%2F%3Fmibextid%3DwwXIfr", label: "Facebook", icon: "fb" },
-  { href: "https://www.instagram.com/stonefortsecurities/", label: "Instagram", icon: "ig" },
-  { href: "https://www.linkedin.com/company/stonefort-securities/", label: "LinkedIn", icon: "in" },
-  { href: "https://x.com/Sfsecurities", label: "X", icon: "x" },
-  { href: "https://www.youtube.com/@SFsecurities", label: "YouTube", icon: "yt" },
+  {
+    href: "https://www.facebook.com/people/Stonefort-Securities/61576805064272/?mibextid=wwXIfr&rdid=OLRs6M27PoIBo4as&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16QwwioCGv%2F%3Fmibextid%3DwwXIfr",
+    label: "Facebook",
+    icon: "fb",
+  },
+  {
+    href: "https://www.instagram.com/stonefortsecurities/",
+    label: "Instagram",
+    icon: "ig",
+  },
+  {
+    href: "https://www.linkedin.com/company/stonefort-securities/",
+    label: "LinkedIn",
+    icon: "in",
+  },
+  {
+    href: "https://x.com/Sfsecurities",
+    label: "X",
+    icon: "x",
+  },
+  {
+    href: "https://www.youtube.com/@SFsecurities",
+    label: "YouTube",
+    icon: "yt",
+  },
+];
+
+const legalLinks = [
+  { href: "/legal-documents", label: "Legal Documents" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/cookies-policy", label: "Cookies Policy" },
+  { href: "/terms-and-conditions", label: "Terms and Conditions" },
 ];
 
 export default function Footer() {
   return (
     <footer className={styles.footer} aria-label="Site footer">
       <div className={styles.container}>
-        {/* Center Logo */}
-        <div className={styles.logoRow}>
-          <Link href="/" className={styles.brand} aria-label="Stonefort home">
-            <Image
-              src="/logo/stonefortLogo.png"
-              alt="Stonefort Securities"
-              width={220}
-              height={52}
-              className={styles.logo}
-              priority
-            />
-          </Link>
-        </div>
 
-        {/* Row: Left (Connect) | Right (Menu) */}
-        <div className={styles.navRow}>
+{/* TOP SOCIAL + LEGAL ROW */}
+<div className={styles.topRow}>
+  <div className={styles.socialLinks}>
+    {socials.map((s) => (
+      <a
+        key={s.label}
+        href={s.href}
+        target="_blank"
+        rel="noreferrer"
+        className={styles.socialBtn}
+        aria-label={s.label}
+        title={s.label}
+      >
+        <SocialIcon type={s.icon} />
+      </a>
+    ))}
+  </div>
+
+  <nav aria-label="Legal links">
+    <ul className={styles.topLegalLinks}>
+      {legalLinks.map((item) => (
+        <li key={item.href}>
+          <Link href={item.href} className={styles.topLegalLink}>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+        <div className={styles.grid}>
           {/* LEFT */}
           <div className={styles.leftCol}>
-            <div className={styles.colTitle}>Connect with us</div>
-            <div className={styles.socialLinks}>
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.socialBtn}
-                  aria-label={s.label}
-                  title={s.label}
-                >
-                  <SocialIcon type={s.icon} />
-                </a>
-              ))}
+         
+
+            <div className={styles.menuBlock}>
+              <h3 className={styles.sectionTitle}>Site Menu</h3>
+              <nav aria-label="Footer navigation">
+                <ul className={styles.menu}>
+                  {menu.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className={styles.menuLink}>
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+
+            <div className={styles.disclaimerBlock}>
+              <h3 className={styles.sectionTitle}>Disclaimer</h3>
+
+              <p className={styles.legalText}>
+                Stonefort Securities LLC is licensed by the Capital Market Authority, UAE, under Category 5 (License No. 20200000226). Stonefort Securities LLC is authorized solely to conduct financial advisory, promotional, and client introduction activities in relation to financial products and services offered by Stonefort Securities Ltd. 
+              </p>
+
+              <p className={styles.legalText}>
+                Stonefort Securities LLC does not hold client funds or execute trades; its role is strictly limited to financial awareness and client introductions within the approved regulatory framework.  
+              </p>
+
+              <p className={styles.riskText}>
+                <strong>Risk Warning:</strong> Trading Contracts for Difference
+                (CFDs) on margin involves a high level of risk and may not be
+                suitable for all investors. You should ensure that you fully
+                understand the risks involved before trading.
+              </p>
             </div>
           </div>
 
           {/* RIGHT */}
           <div className={styles.rightCol}>
-            <div className={styles.colTitle}>Menu</div>
-            <nav aria-label="Footer navigation">
-              <ul className={styles.menu}>
-                {menu.map((m) => (
-                  <li key={m.href}>
-                    <Link className={styles.menuLink} href={m.href}>
-                      {m.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div className={styles.appBlock}>
+              <div className={styles.phoneWrap}>
+                <Image
+                  src="/images/platform/stonefortraderfooter.webp"
+                  alt="Stonefort Trader mobile app"
+                  width={700}
+                  height={900}
+                  className={styles.phoneMockup}
+                  priority
+                />
+
+                <div className={styles.badgesOverlay}>
+                  <a
+                    href="#"
+                    className={styles.storeLink}
+                    aria-label="Download on the App Store"
+                  >
+                    <Image
+                      src="/images/app-store.png"
+                      alt="Available on the App Store"
+                      width={420}
+                      height={120}
+                      className={styles.storeBadge}
+                    />
+                  </a>
+
+                  <a
+                    href="#"
+                    className={styles.storeLink}
+                    aria-label="Get it on Google Play"
+                  >
+                    <Image
+                      src="/images/google-play.png"
+                      alt="Available on Google Play"
+                      width={420}
+                      height={120}
+                      className={styles.storeBadge}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Legal / risk */}
-        <div className={styles.legalBox}>
-          <p className={styles.legalText}>
-           Stonefort Securities LLC is licensed by the Capital Market Authority, UAE, under Category 5 (License No. 20200000226). Stonefort Securities LLC is authorized solely to conduct financial advisory, promotional, and client introduction activities in relation to financial products and services offered by Stonefort Securities Ltd.  
-
-<br/><br/>Stonefort Securities LLC does not hold client funds or execute trades; its role is strictly limited to financial awareness and client introductions within the approved regulatory framework.  
-          </p>
-        </div>
-
-        {/* Bottom */}
-        <div className={styles.bottomRow}>
-          <div className={styles.copy}>
-            Copyright © {new Date().getFullYear()} Stonefort. All rights reserved.
-          </div>
-
-          {/* <div className={styles.bottomLinks}>
-            <Link href="/privacy-policy" className={styles.bottomLink}>
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className={styles.bottomLink}>
-              Terms
-            </Link>
-            <Link href="/risk-disclosure" className={styles.bottomLink}>
-              Risk Disclosure
-            </Link>
-          </div> */}
-        </div>
+<div className={styles.bottomBar}>
+  <p className={styles.copy}>
+    Copyright © {new Date().getFullYear()} Stonefort. All rights reserved.
+  </p>
+</div>
       </div>
     </footer>
   );

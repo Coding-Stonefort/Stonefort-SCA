@@ -15,21 +15,19 @@ export default function RelationshipSection() {
 
             <div className={styles.body}>
               <p className={styles.desc}>
-                Trade with confidence knowing that Stonefort MENA is a CMA Category 5 regulated
-                broker. We do not hold client funds or execute trades directly. Instead, we connect
-                you to Stonefort’s regulated entities, which provide trading services and manage
-                accounts securely under their licences.
+                Stonefort MENA provides introductions to Stonefort Securities Ltd. Which remains solely responsible for all trading services and account management.
               </p>
 
               <p className={styles.desc}>
-                As part of our commitment to client protection, Stonefort also offers insurance
-                coverage of up to USD 1,000,000, giving an extra layer of security for your funds.
-                Our role is to guide and support you in accessing these services while ensuring full
-                compliance with CMA regulations.
+                We do not hold client funds or execute trades. All trading services, account management, and fund custody are provided directly by Stonefort Securities Ltd under its regulatory licenses.
+              </p>
+
+              <p className={styles.desc}>
+                Stonefort Securities Ltd also offers insurance coverage of up to USD 1,000,000, providing an extra layer of protection for client funds. Stonefort MENA’s role is to introduce, guide, and support clients in accessing these services while ensuring full compliance with CMA Category 5 regulations.
               </p>
 
               <p className={styles.subtext}>
-                For more details, visit the CMA website.
+                For more details regarding Stonefort MENA’s licensed services, please visit the CMA website
               </p>
             </div>
 

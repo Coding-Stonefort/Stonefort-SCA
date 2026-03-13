@@ -213,7 +213,7 @@ export default function Header() {
             </nav>
 
             <div className={styles.actions}>
-              <Link href="https://sfs-muportal.com/#/login" className={styles.login}>
+              <Link href="https://stonefortsecurities.com/all-login" className={styles.login}>
                 Login
               </Link>
               <Link
@@ -301,7 +301,7 @@ export default function Header() {
 
             <div className={styles.drawerActions}>
               <Link
-                href="https://sfs-muportal.com/#/login"
+                href="https://stonefortsecurities.com/all-login"
                 className={styles.drawerLogin}
                 onClick={closeMenu}
               >

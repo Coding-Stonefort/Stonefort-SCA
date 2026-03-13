@@ -69,7 +69,7 @@ export default function AboutMoneyProtected() {
         <div className={styles.legal} role="note" aria-label="Regulatory notice">
           <p className={styles.legalTitle}>Regulatory Notice</p>
           <p className={styles.legalText}>
-            At Stonefort Securities LLC (SFS), we are licensed by the CMA, UAE, under Category 5. We introduce clients to regulated financial products but do not provide investment services, hold client funds, or process transactions. Our role is to ensure a secure, transparent, and compliant trading experience. 
+            At Stonefort Securities LLC (Stonefort MENA), we are licensed by the CMA, UAE, under Category 5. We introduce clients to regulated financial products but do not provide investment services, hold client funds, or process transactions. Our role is to ensure a secure, transparent, and compliant trading experience.
           </p>
         </div>
       </div>
