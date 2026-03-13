@@ -50,7 +50,7 @@ export default function AboutMoneyProtected() {
 
           {/* Right stacked list */}
           <div className={styles.stack} aria-label="Protection features">
-            <div className={styles.rail} aria-hidden="true" />
+            {/* <div className={styles.rail} aria-hidden="true" /> */}
             {items.map((it, i) => (
               <article key={it.title} className={styles.item}>
                 <div className={styles.dot} aria-hidden="true">

@@ -44,7 +44,7 @@ const legalLinks = [
   { href: "/legal-documents", label: "Legal Documents" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/cookies-policy", label: "Cookies Policy" },
-  { href: "/terms-and-conditions", label: "Terms and Conditions" },
+
 ];
 
 export default function Footer() {
@@ -127,7 +127,7 @@ export default function Footer() {
             <div className={styles.appBlock}>
               <div className={styles.phoneWrap}>
                 <Image
-                  src="/images/platform/stonefortraderfooter.webp"
+                  src="/images/platform/stonefortraderf.webp"
                   alt="Stonefort Trader mobile app"
                   width={700}
                   height={900}
@@ -137,7 +137,7 @@ export default function Footer() {
 
                 <div className={styles.badgesOverlay}>
                   <a
-                    href="#"
+                    href="https://stonefortpartners.ae/downloadapp.html"
                     className={styles.storeLink}
                     aria-label="Download on the App Store"
                   >
@@ -151,7 +151,7 @@ export default function Footer() {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://stonefortpartners.ae/downloadapp.html"
                     className={styles.storeLink}
                     aria-label="Get it on Google Play"
                   >

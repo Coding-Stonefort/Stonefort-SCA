@@ -9,10 +9,10 @@ export default function AboutWhyChoose() {
 
         <p className={styles.lead}>
           Stonefort MENA gives traders in the region secure access to Stonefort’s fully regulated services.
-          Trade confidently on cutting-edge platforms with professional account support, expert guidance,
-          and clear, transparent processes. We combine education, technology, and client-focused assistance
-          to help you make smarter trading decisions every step of the way.
+          Trade confidently on cutting-edge platforms with professional support, expert guidance, and clear, transparent processes.
+          We combine education, technology, and client-focused assistance to help you make smarter trading decisions.
         </p>
+
 
         <div className={styles.grid}>
           <div className={styles.card}>

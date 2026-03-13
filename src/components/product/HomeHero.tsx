@@ -22,14 +22,14 @@ export default function HomeHero() {
             <Link href="https://stonefortsecurities.com/registration/" className={styles.primaryBtn}>
               Open Account
             </Link>
-            <Link href="https://stonefortsecurities.com/registration/" className={styles.secondaryBtn}>
+            {/* <Link href="https://stonefortsecurities.com/registration/" className={styles.secondaryBtn}>
               Try Free Demo
-            </Link>
+            </Link> */}
           </div>
 
-          <p className={styles.note}>
+          {/* <p className={styles.note}>
             Authorised and regulated by the Capital Market Authority (CMA).
-          </p>
+          </p> */}
         </div>
 
         {/* Right image */}

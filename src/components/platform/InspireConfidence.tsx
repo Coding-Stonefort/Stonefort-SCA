@@ -26,7 +26,7 @@ const TOP = [
 const BOTTOM = [
   {
     title: "Market Insights & Trading Signals",
-    desc: "Use integrated analytical tools and pattern recognition to identify trends and support informed decisions.",
+    desc: "Use integrated analytical tools and advanced pattern recognition to identify trends and support informed decisions.",
     img: "/images/platform/Market-insight.webp",
     alt: "Market insights icon",
   },

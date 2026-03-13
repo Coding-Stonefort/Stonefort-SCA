@@ -11,7 +11,7 @@ export default function AboutIntegritySection() {
             At<span> Stonefort</span>  MENA
           </h2>
 
-          <p className={styles.lead}>
+          <p className={styles.text}>
             We believe access to global financial markets should be simple, professional, transparent, and fully supported.
           </p>
 

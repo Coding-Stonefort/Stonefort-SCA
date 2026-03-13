@@ -12,9 +12,10 @@ import "swiper/css/pagination";
 
 const slides = [
   { id: 1, image: "/images/platform/stonefortrader1.webp", alt: "StonefortTrader splash screen" },
+    { id: 4, image: "/images/platform/stonefortrader4.webp", alt: "StonefortTrader charts screen" },
   // { id: 2, image: "/images/platform/stonefortrader2.webp", alt: "StonefortTrader trading screen" },
   { id: 3, image: "/images/platform/stonefortrader3.webp", alt: "StonefortTrader login screen" },
-  { id: 4, image: "/images/platform/stonefortrader4.webp", alt: "StonefortTrader charts screen" },
+
   { id: 5, image: "/images/platform/stonefortrader5.webp", alt: "StonefortTrader order screen" },
   { id: 6, image: "/images/platform/stonefortrader6.webp", alt: "StonefortTrader account performance screen" },
   { id: 7, image: "/images/platform/stonefortrader7.webp", alt: "StonefortTrader currency strength screen" },
