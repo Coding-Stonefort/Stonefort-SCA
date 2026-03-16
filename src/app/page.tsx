@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-            <TrustedPlatforms />
+      <TrustedPlatforms />
       <AboutWhyChoose />
       <AboutIntegrity />
       <AboutMissionVision />

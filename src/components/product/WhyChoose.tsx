@@ -11,7 +11,7 @@ const cards = [
   },
   {
     title: "Competitive Market Conditions",
-    desc: "Access to globally established trading platforms offering institutional-grade pricing, with spreads starting from 0 on EUR/USD, approximately 2.3 cents on crude oil, and competitive market spreads on gold, all dynamically reflecting liquidity and prevailing market conditions.",
+    desc: "Access globally established trading platforms with institutional-grade pricing, offering highly competitive spreads on major currencies, commodities, and metals, dynamically reflecting liquidity and current market conditions.",
   },
   {
     title: "Secure Digital Environment",

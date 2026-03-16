@@ -33,7 +33,7 @@ export default function RelationshipSection() {
 
             <div className={styles.btnRow}>
               <Link
-                href="https://www.sca.gov.ae/en/home.aspx"
+                href="https://www.sca.gov.ae/en/open-data/licensed-companies?q=CP-0001280"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.sfsBtn} ${styles["sfsBtn--primary"]}`}

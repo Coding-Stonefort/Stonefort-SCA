@@ -279,6 +279,19 @@
   color:var(--sfs-mint);
 }
 
+.appLogo{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+.appLogoImg{
+  width:100%;
+  max-width:280px;
+  height:auto;
+  object-fit:contain;
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;

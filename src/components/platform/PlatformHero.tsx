@@ -19,9 +19,9 @@ export default function PlatformHero() {
             <a className={styles.primary} href="https://stonefortsecurities.com/registration/">
               Open Account
             </a>
-            <a className={styles.secondary} href="https://sfs-muportal.com/#/login">
+            {/* <a className={styles.secondary} href="https://sfs-muportal.com/#/login">
               Try Free Demo
-            </a>
+            </a> */}
           </div>
 
     

@@ -220,7 +220,7 @@ export default function Header() {
                 href="https://stonefortsecurities.com/registration/"
                 className={styles.live}
               >
-                Live Account
+               Open an Account
               </Link>
             </div>
           </div>

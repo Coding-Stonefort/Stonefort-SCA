@@ -14,9 +14,9 @@ export default function CFDMarketsPro() {
 
         <MarketBoard />
 
-        <a className={styles.browse} href="/Market">
+        {/* <a className={styles.browse} href="/Market">
           Browse all markets
-        </a>
+        </a> */}
 
         <p className={styles.disclaimer}>
   Disclaimer: All market data is provided for informational purposes only and does not constitute an offer or solicitation of trading services.

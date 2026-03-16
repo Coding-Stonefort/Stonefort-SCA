@@ -45,7 +45,7 @@ const FEATURES: Feature[] = [
     icon: "/images/market/Shares-CFDs.webp",
     title: "Shares (CFDs)",
     desc: "Go long or short on selected global shares with margin trading.",
-    chips: ["Top US", "Top EU", "Top Asia"],
+    chips: ["Nvidia", "Apple", "Amazon"],
   },
 ];
 

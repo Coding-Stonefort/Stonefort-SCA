@@ -37,12 +37,12 @@ export default function HeroAccounts() {
             Open Account
           </Link>
 
-          <Link 
+          {/* <Link 
             href="https://stonefortsecurities.com/registration/" 
             className={styles.secondaryBtn}
           >
             Try Free Demo
-          </Link>
+          </Link> */}
         </div>
 
         </div>

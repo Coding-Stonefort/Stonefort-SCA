@@ -40,7 +40,7 @@ export default function ContactMapForm() {
     const apiBody = {
       site: "stonefort-uae",
       formType: "contact",
-      to: "muhammad.u@stonefortsecurities.com",
+      to: "support@stonefort.ae",
       from: "no-reply@stonefortsecurities.com",
       subject: `Contact Enquiry: ${subject}`,
       body: emailBody,
