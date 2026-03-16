@@ -1,127 +1,98 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./TraderReviews.module.css";
 
-type ReviewItem = {
-  platform: string;
-  logo: string;
-  logoAlt: string;
-  badge: string;
-  review: string;
-  name: string;
-  role: string;
-  initials: string;
-  buttonText: string;
-  buttonHref: string;
-};
-
-const reviews: ReviewItem[] = [
+const reviews = [
   {
+    id: 1,
     platform: "Google Reviews",
-    logo: "https://stonefortsecurities.com/wp-content/uploads/2026/02/google-reviews-logo.webp",
-    logoAlt: "Google Reviews Logo",
-    badge: "Verified Reviews",
-    review:
-      "I've just signed up with Stonefort Securities, and their service has already surpassed my expectations. The platform is intuitive, and their customer support is incredibly responsive.",
-    name: "John Matthews",
-    role: "Professional Trader",
-    initials: "JM",
-    buttonText: "Read More Google Reviews",
-    buttonHref: "https://www.google.com/maps/place/Stonefort+Securities+L.L.C/@25.1853977,55.2640765,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f692f5bbd2b2d:0xd3a6184083590416!8m2!3d25.1853977!4d55.2640765!16s%2Fg%2F11mddl08w8?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D",
+    logo: "/images/googleReview.webp",
+    logoAlt: "Google Reviews",
+    tag: "Google Reviews",
+    // rating: "★★★★★",
+    quote:
+      "I’ve just signed up with Stonefort Securities, and their service has already surpassed my expectations.",
+    label: "Client Feedback",
+    sublabel: "New account holder",
+    buttonText: "View",
+    href: "https://www.google.com/maps/place/Stonefort+Securities+L.L.C/@25.1853977,55.2640765,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f692f5bbd2b2d:0xd3a6184083590416!8m2!3d25.1853977!4d55.2640765!16s%2Fg%2F11mddl08w8?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D",
   },
   {
+    id: 2,
     platform: "WikiFX",
-    logo: "https://stonefortsecurities.com/wp-content/uploads/2026/02/wikifx-logo.webp",
-    logoAlt: "WikiFX Logo",
-    badge: "Regulated Broker",
-    review:
-      "Stonefort Trader simplifies the entire trading experience. The analytical tools are comprehensive yet user-friendly, and their educational resources have been invaluable for strategy development.",
-    name: "Alex Kim",
-    role: "Forex Trader",
-    initials: "AK",
-    buttonText: "Check WikiFX Report",
-    buttonHref: "https://www.wikifx.com/en/dealer/1401450413.html",
+    logo: "/images/wikiFX.webp",
+    logoAlt: "WikiFX",
+    tag: "WikiFX • Client Review",
+    // rating: "★★★★★",
+    quote:
+      "Stonefort Trader simplifies the entire trading experience. 🙂 Highly recommend!",
+    label: "Client Feedback",
+    sublabel: "WikiFX community",
+    buttonText: "View",
+    href: "https://www.wikifx.com/en/dealer/1401450413.html",
   },
 ];
 
-function StarRating({ active }: { active: boolean }) {
-  return (
-    <div className={styles.starRating}>
-      <div className={styles.stars}>★★★★★</div>
-      <div
-        className={`${styles.starsFilled} ${active ? styles.starsFilledActive : ""}`}
-      >
-        ★★★★★
-      </div>
-    </div>
-  );
-}
-
 export default function TraderReviews() {
-  const [animateStars, setAnimateStars] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimateStars(true);
-    }, 250);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section className={styles.section} aria-label="Trader reviews">
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>
-            What Our <span>Traders Say</span>
-          </h2>
-          <p className={styles.desc}>
-            Join traders who trust Stonefort Securities for a more transparent,
-            supportive, and professional trading experience.
-          </p>
-        </div>
-
-        <div className={styles.wrapper}>
-          {reviews.map((item, index) => (
-            <article className={styles.card} key={item.platform}>
-              <div className={styles.platformHeader}>
-                <div className={styles.logoContainer}>
+        <div className={styles.grid}>
+          {reviews.map((item) => (
+            <article key={item.id} className={styles.card}>
+              <div className={styles.topRow}>
+                <div className={styles.logoWrap}>
                   <Image
                     src={item.logo}
                     alt={item.logoAlt}
-                    width={48}
+                    width={170}
                     height={48}
-                    unoptimized
+                    className={styles.logo}
                   />
                 </div>
 
-                <div className={styles.platformInfo}>
-                  <h3>{item.platform}</h3>
-                  <StarRating active={animateStars} />
-                  <span className={styles.badge}>{item.badge}</span>
-                </div>
+                <div className={styles.tag}>{item.tag}</div>
               </div>
 
-              <div className={styles.reviewContent}>{item.review}</div>
+              {/* <div className={styles.rating}>{item.rating}</div> */}
 
-              <div className={styles.clientInfo}>
-                <div className={styles.clientAvatar}>{item.initials}</div>
-                <div className={styles.clientDetails}>
-                  <h4>{item.name}</h4>
-                  <p>{item.role}</p>
+              <blockquote className={styles.quote}>
+                “{item.quote}”
+              </blockquote>
+
+              <div className={styles.bottomRow}>
+                <div className={styles.meta}>
+                  <h3 className={styles.metaTitle}>{item.label}</h3>
+                  <p className={styles.metaText}>{item.sublabel}</p>
                 </div>
+
+                <a
+                  href={item.href}
+                  className={styles.button}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{item.buttonText}</span>
+                  <svg
+                    className={styles.buttonIcon}
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4.66675 11.3333L11.3334 4.66666M11.3334 4.66666H6.00008M11.3334 4.66666V9.99999"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
 
-              <a
-                href={item.buttonHref}
-                className={styles.actionButton}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {item.buttonText}
-              </a>
+              <span className={styles.glowOne} />
+              <span className={styles.glowTwo} />
             </article>
           ))}
         </div>
