@@ -360,3 +360,33 @@
     transform: none !important;
   }
 }
+@media (max-width: 600px) {
+  .section {
+    padding: 56px 16px 30px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  .iconWrap,
+  .icon {
+    width: 84px;
+    height: 84px;
+  }
+
+  .cardDesc {
+    min-height: auto;
+  }
+}
